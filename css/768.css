@@ -1,0 +1,448 @@
+/*
+  Running Squiz Matrix
+  Developed by Squiz - http://www.squiz.net
+  Squiz, Squiz Matrix, MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
+  Page generated: 29 July 2013 15:09:18
+*/
+
+
+/*
+  Running Squiz Matrix
+  Developed by Squiz - http://www.squiz.net
+  Squiz, Squiz Matrix, MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
+  Page generated: 15 May 2013 11:23:36
+*/
+
+
+/* Query Styles for 768px and up */
+
+/* new carousel */
+.slide {
+  background-color: #e1e8ea;
+}
+
+.carousel {
+    width: 100%;
+    position: relative;
+}
+
+.blue-button {
+    width:95%;
+}
+/* new carousel */
+
+header {
+    padding-top: 28px;
+}
+
+/* MENUS */
+ /* ensure #nav is visible on desktop version */
+#nav {
+    display: block !important;
+}
+
+#menu-icon {
+    display:none;
+}
+
+
+/* Normal Left Navigation ------------------------------ */
+
+#content-menu-link {
+    display: none;
+}
+
+.leftnav {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.leftnav li {
+    margin-bottom: 12px;
+    padding-right: 10px;
+}
+
+.leftnav a {
+    color: rgb(98,98,98);
+    font-weight: normal;
+}
+
+.leftnav li.active a, .leftnav li.active li.active a {
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    color: #c00;
+}
+
+.leftnav li.active li.active li.active {
+    background-color: #e6ecef;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.leftnav li.active li.active li.active a {
+    color: #c00;
+    font-weight: bold;
+    /* padding-bottom: 10px; */
+}
+.leftnav li.active li.active li.active li.active a {
+    color: #c00;
+    font-weight: bold;
+    /* padding-bottom: 10px; */
+}
+
+.leftnav li.active li a, .leftnav li.active li.active li a, .leftnav li.active li.active li.active li a {
+    font-weight: normal;
+    padding: 0;
+    border: none;
+    color: rgb(98,98,98);
+}
+
+.leftnav li li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    line-height: 18px;
+}
+
+.leftnav ul li ul {
+    border-bottom: 1px solid #ccc;
+    padding-top: 1em;
+}
+
+.leftnav li li li {
+    font-size: 12px;
+    margin-bottom: 8px;
+    line-height: 16px;
+    line-height: 1.6rem;
+}
+
+.leftnav ul li li ul {
+    border-bottom: none;
+    padding-top: 10px;
+}
+
+nav.leftnav.events-nav {
+    padding-top: 0;
+}
+.events-nav .events-back {
+    border-top: 1px solid #ccc;
+    padding-top: 1em;
+}
+.events-nav .events-back a {
+    padding-left: 24px;
+    background-image: url('//scotland.shelter.org.uk/?a=685809');
+    background-repeat: no-repeat;
+    background-position: 0;
+}
+/* END MENUS */
+
+
+#content-article aside {
+    margin-left:8%;
+}
+#content aside.tb-all,
+#content aside.t-all{
+    margin-left: auto;   
+}
+
+.contents li, .sections li {
+    height:100px;
+}
+
+.topics li {
+    height: 60px;
+}
+
+.useful-info ul {
+    margin-bottom:30px;
+}
+
+.strapline {
+    font-weight: 200;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+header nav ul {
+    margin-bottom:0;
+}
+
+header nav li {
+    padding-right: 18px;
+    font-size: 16px;
+}
+
+header .seealso ul {
+    margin-top:20px;
+    margin-bottom:0;
+    
+}
+
+header .seealso li {
+    padding-right: 15px;
+    font-size: 14px;
+}
+
+header input#search {
+    width: 60%;
+}
+
+/* amended width to percentage - KB */
+header button {
+    width: 30%;
+}
+
+aside.action .point {
+    position: absolute;
+    left: -31px;
+    top: 0;
+    display:block;
+}
+
+aside.action.form input[type="text"] {
+    width: 97%;
+}
+@media (min-width: 850px) {
+    aside.action.form input[type="text"] {
+        width: 97.5%;
+    }
+}
+
+nav.leftnav select {
+    display:none;
+}
+
+nav.leftnav ul {
+    display:block;
+}
+
+.carousel {
+    margin-top: 0;
+}
+
+.footer_col {
+  width: 150px;
+}
+
+#toggle {
+    display: block;
+}
+
+.next {
+    font-size: 28px;
+    padding: 10px 45px 10px 15px;
+    background: #007ab7 url(//scotland.shelter.org.uk/__data/assets/image/0005/643316/arrow02.png) 80px 45% no-repeat;
+}
+
+.email, .print {
+    margin-left:10%;
+} 
+
+#custom_amount_wrapper #submit_button {
+    width: 45%;
+}
+
+#campaigns-header .story {
+   position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    background-color: #333;
+    background: rgba(16, 17, 14, .7);
+    padding: 10px 25px 0 25px;
+}
+
+#campaigns-header .story a {
+    color: #95DCFF;
+}
+
+#campaigns-header .story {
+    width: 29%;
+    right: 0;
+    left: auto;
+    padding: 1.5em 1em 2em 1.5em;
+}
+.newsletter {
+background-image: 
+        url('//www.shelter.org.uk/__data/assets/image/0006/645099/stamp.png'),
+        url('//www.shelter.org.uk/__data/assets/image/0019/645103/stripes.png');
+    background-position: 98% 34px, 50% 97%, 50% 10px, left top;
+    background-size: 250px auto, 922px auto, 922px auto, 33px auto;
+    background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+}
+
+
+header nav ul {
+    margin-bottom:0;
+}
+
+header nav li {
+    padding-right: 18px;
+    font-size: 16px;
+}
+
+.seealso {
+    margin-top: 0;
+}
+
+header .seealso ul {
+    margin-top:20px;
+    margin-bottom:0;    
+}
+
+header .seealso li {
+    padding-right: 15px;
+    font-size: 14px;
+}
+
+.topnav li a {
+    display: inline;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    height: auto;
+    vertical-align: baseline;
+    text-align: left;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+
+
+.topnav li.home a, .topnav li.advice a, .topnav li.involve a {
+    background-image: none;
+}
+
+.topnav .active a, .topnav a:hover {
+    color: #f00;
+    background-color: transparent;
+}
+
+.topnav ul.nav-links {
+    display: block;
+}
+
+.topnav ul.show-nav-link, .topnav.show-nav #hide-nav-link {
+    display: none;
+}
+
+/* EVENTS */
+.event-header {
+    background-positon: 0 0;
+    padding-bottom: 0;
+
+}
+.event-header hgroup {
+    background: none repeat scroll 0 0 rgba(16, 17, 14, 0.85);
+    width: 15em;
+    height: auto;
+    padding-bottom: 0.5em;
+}
+.event-header h1 {
+    color: #95DCFF;
+}
+.event-header h2 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+.event-facts {
+    background-color: #212121;
+    color: #fff;
+}
+.event-facts ul {
+    float: right;
+}
+.event-facts li {
+   float: left;
+}
+
+.event-facts li {
+    padding-left: 65px;
+    min-height: 43px;
+}
+.event-facts :not(:last-child) {
+    border-right: 1px #fff solid;
+    border-bottom-width: 0;
+    padding-right: 1em;
+    padding-bottom: 0;
+    background-position: 15px 0px;
+}
+.event-facts :not(:first-child) {
+    padding-top: 0;
+    background-position: 15px 0px;
+}
+.event-content section.db4.event-facts {
+    background-color: #E6ECEF;
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.event-content .db2-db3 h2 {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    font-weight: 200;
+    margin-bottom: 28px;
+    margin-bottom: 2.8rem;
+    color: rgb(56,56,56);
+}
+
+/* EVENT SPECIFIC (background images etc) */    
+
+.event-parachuting .event-header {
+    background-image: url('../img/parachuting_t.jpg');
+    height: 294px;
+    padding-bottom: 0;
+}
+
+.event-spartan-race .event-header {
+    background-image: url('//scotland.shelter.org.uk/?a=670334');
+    height: 333px;
+}
+
+.event-spartan-race .event-content {
+    margin-top: 3rem;
+}
+
+.ny-city-marathon .event-header {
+    background-image: url('//scotland.shelter.org.uk/?a=670885');
+    height: 370px;
+}
+.royal-parks-half .event-header {
+    background-image: url('//scotland.shelter.org.uk/?a=670888');
+    height: 370px;
+}
+.berlin-marathon .event-header {
+    background-image: url('//scotland.shelter.org.uk/?a=670889');
+    height: 370px;
+}
+.great-north-run .event-header {
+    background-image: url('//scotland.shelter.org.uk/?a=685804');
+    height: 405px;   
+}
+.great-north-run .event-header hgroup {
+  margin-top: 120px;
+  width: 18em;
+}
+
+
+/* Shelter Champions */
+#content .champions-sharing {
+    background: url('http://scotland.shelter.org.uk/__data/assets/image/0004/586687/champions-badge.png') no-repeat top center;
+    padding-top: 170px;
+}
+.champions-signup .signup-button {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.champions-form-page {
+        background: url('http://scotland.shelter.org.uk/__data/assets/image/0004/586687/champions-badge.png') no-repeat top right;
+}
+.champions-form-page .champions-header {
+    padding-right: 155px;
+}

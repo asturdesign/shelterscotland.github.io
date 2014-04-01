@@ -1,0 +1,166 @@
+/*
+  Running Squiz Matrix
+  Developed by Squiz - http://www.squiz.net
+  Squiz, Squiz Matrix, MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
+  Page generated: 29 July 2013 15:15:27
+*/
+
+
+/* Query Styles for 990px and up */
+
+#content {
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+/* new carousel */
+.carousel {
+position: relative;
+width: 100%;
+}
+
+.grey-button {
+    width:79%;
+}
+/* new carousel */
+
+/* amended style declaration -- KB */
+
+#content article div[id*='content'] > *,
+.race-content > * {
+    width: 74.335711985094%;
+}
+
+#content article div[id*='content'] > img,
+.race-content > img {
+    width: auto;
+}
+
+#content article .db2-db3 div[id*='content'] > * {
+    width: 100%;
+}
+
+#content article > div[id*='content'] > img {
+    width: auto;
+}
+
+#content article div[id*='content'] > div[id*='content'], #content article div[id*='content'] > div[id*='new'] {
+    width: 100%;    
+}
+
+/* amended to allow for CMS-generated DIVs -- KB*/
+
+
+#content article div[id*='content'] aside {
+    width: 31.60509829%;
+    margin-right: 0;
+    margin-left:5%;
+}
+
+
+/* changed to summary from class to ID, added additional definitions KB */
+
+#summary, #content article #summary div[id*='content'] > * {
+    width: auto;
+}
+
+.topics li {
+    height: 75px;
+}
+
+.strapline {
+    padding-top: 25px;
+    padding-left: 0;
+}
+
+.written {
+    line-height: 40px;
+}
+
+.carousel .casestudy p {
+    float: left;
+    width: 60%;
+    margin-left: 25px;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+/* new carousel */
+header nav ul {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.email, .print {
+    margin-left:20%;
+}
+
+.contents li {
+    height: 160px;
+}
+
+button {
+    width: 110px;
+    font-size: 18px;
+} 
+
+
+aside.action.form {
+    font-size: 0.875em;
+}
+aside.action.form input[type="text"] {
+    width: 93%;
+}
+
+/*Experimental - CH*/
+#content article .db2-db3 div[id*='content'] aside.action {
+    width: 42%;
+    float: right;
+    margin-right: -51.444474%;
+    clear: both;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/* EVENTS */
+
+.event-header hgroup {
+    width: 20em;
+}
+
+.event-content .db2-db3 h2 {
+    font-size: 3.6rem;
+    line-height: 3rem;
+}
+
+
+/* EVENT SPECIFIC (background images etc) */
+.event-spartan-race .event-header hgroup {
+   margin-top: 80px;
+}
+
+.event-spartan-race #content input[type="text"] {
+    width: 22%;
+    margin-right: 0.1em;
+}
+
+.event-spartan-race #content input[type="submit"] {
+    float: right;
+    width: auto;
+}
+
+.ny-city-marathon .event-header hgroup {
+  margin-top: 150px;
+  width: 24em;
+}
+.berlin-marathon .event-header hgroup {
+  margin-top: 120px;
+  width: 24em;
+}
+
+/* Shelter Champions */
+#champions-main {
+    width: 98.4%;
+}
+.champions-form-page {
+    background-position: 93% 0;
+}

@@ -1,0 +1,3527 @@
+/*
+  Running Squiz Matrix
+  Developed by Squiz - http://www.squiz.net
+  Squiz, Squiz Matrix, MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
+  Page generated: 29 July 2013 15:11:37
+*/
+
+
+/*
+
+Colours Pallette
+
+Pale Green - #edf3e5 or #EDF1E9
+Blue - 
+Pale Blue - E7EFF3
+Pale Red - e6ecef
+Dark Red - c00013
+Shelter Red - ed0000
+Brown - F4EEE4
+
+*/
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+    color: rgb(98,98,98);
+    background-color: #f3f3f3;
+}
+
+img, embed, object, video {
+max-width:100%;
+}
+
+img {
+    display: block;
+}
+
+fieldset {
+padding-top: 5px;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 36px;
+    font-size: 3.6rem;
+    line-height: 36px;
+    line-height: 1em;
+    font-weight: 200;
+    margin-bottom: 28px;
+    margin-bottom: 2.8rem;
+    color: rgb(56,56,56);
+}
+
+h2 {
+    font-size: 20px;
+    font-size: 2.0rem;
+    font-weight: 400;
+    margin-bottom: 1em;
+    color: #c00;
+}
+
+h2.arrow {
+    color: #f00;
+    font-size: 36px;
+    font-weight: 300;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-bottom: 2.0rem;
+    line-height: 3rem;
+
+}
+
+h3 {
+    font-size: 14px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: rgb(56,56,56);
+    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+}
+
+h4 {
+    font-weight: 400;
+    margin-bottom: 0;
+    color: rgb(56,56,56);
+    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+}
+
+
+ #skip {
+  position:absolute;
+  font-size:50%;
+  margin-left:40%;
+  top:1px;
+  z-index:-1;
+  display:none;
+}
+
+ .wrapper {
+    max-width: 990px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* General Typography */
+
+
+::-moz-selection{
+    background:#ed0000;
+    color:#fff;
+    text-shadow:none}
+
+::selection{
+    background:#ed0000;
+    color:#fff;
+    text-shadow:none
+}
+
+::-moz-selection{
+    background:#ed0000;
+    color:#fff;
+    text-shadow:none}
+
+::-webkit-selection{
+    background:#ed0000;
+    color:#fff;
+    text-shadow:none
+}
+
+@font-face {
+    font-family: "Ampersand";
+    src: local("Georgia");
+    unicode-range: U+270C;
+}
+
+.amp {
+    font-family: Ampersand, Georgia, serif;
+}
+
+
+p {
+    margin-bottom: 20px;
+    margin-bottom: 2rem;
+}
+
+blockquote {
+    float:right;
+    width:60%;
+    clear:both;
+    background:#eae3e1 url(//england.shelter.org.uk/__data/assets/file/0005/295268/lquote.gif) left top no-repeat;
+    margin:1em 0 1em .5em;
+    padding: 1.2em;
+    display: block;
+}
+
+cite {
+    display: block;
+    font-size:0.8em;
+}
+
+
+
+a {
+    color: #007ab7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.smalltext {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.small {
+    font-size: 75%;
+}
+.title, .active {
+    font-weight: bold;
+}
+
+
+button {
+    background-color: #007ab7;
+    border: none;
+    color: #fff;
+    height: 47px;
+    width: 110px;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    float: left;
+    margin: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+button.generalSearch {
+    background-color: #666666;
+}
+/* Lists */
+article ul,
+#content-article ul {
+    margin-bottom: 1.5em;
+    padding-left: 1em;
+}
+article ul ul,
+#content-article ul ul {
+    margin-bottom: 0;
+}
+ul.links {
+    list-style: none;
+}
+
+/*** Hyphens **/
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+    /* Accepted values: [ none | manual | auto ] */
+    -webkit-hyphens: none;    /* Safari 5.1 thru 6, iOS 4.2 thru 6 */
+    -moz-hyphens: none;        /* Firefox 16 thru 20 */
+    -ms-hyphens: none;        /* IE10 */
+    -o-hyphens: none;        /* PRESTO...haha LOL */
+    hyphens: none;            /* W3C standard */
+}
+
+/*    Paragraphs */
+
+p {
+    margin: 0 0 1.5em;
+}
+
+
+
+
+/**
+ * Abbreviations Markup
+ *
+    <abbr title="hyper text markup language">HMTL</abbr>
+ *
+ * Extend this object into your markup.
+ *
+ */
+abbr {
+    font-variant: small-caps;
+    font-weight: 600;
+    text-transform: lowercase;
+    color: gray;
+}
+abbr:hover {
+    cursor: help;
+}
+
+.drop-cap:first-letter {
+    float: left;
+    margin: 0;
+    padding: 0.125em 0.125em 0 0;
+    font-size: 5em;
+    font-family: "HelveticaNeue", "Helvetica Neue Condensed Bold", 'Open Sans Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 0.5;
+    text-indent: 0;
+    background: transparent;
+    color: #c00;
+}
+
+/* MENUS */
+@media screen and (max-width: 766px) {
+/* menu icon */
+#menu-icon {
+    display: none; /* hide menu icon initially */
+}
+
+#nav, 
+#nav li {
+    margin: 0;
+    padding: 0;
+}
+#nav li {
+    list-style: none;
+    float: left;
+    margin-right: 5px;
+}
+
+/* nav link */
+#nav a {
+    padding: 4px 15px;
+    display: block;
+    color: #000;
+    background: #ecebeb;
+}
+#nav a:hover {
+    background: #f8f8f8;
+}
+
+/* nav dropdown */
+#nav ul {
+    background: #fff;
+    padding: 2px;
+    position: absolute;
+    border: solid 1px #ccc;
+    display: none; /* hide dropdown */
+    width: 200px;
+}
+#nav ul li {
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+#nav li:hover > ul {
+    display: block; /* show dropdown on hover */
+}
+
+/* nav-wrap */
+    .seealso {
+        /*position: relative;*/
+        display: none;
+    }
+
+    /* menu icon */
+    #menu-icon {
+        color: #000;
+        width: 100%;
+        height: 50px;
+        padding: 0 0 0 0;
+        cursor: pointer;
+        display: block; /* show menu icon */
+        font-size: 12px;
+        line-height: 1.3;
+        text-align: center;
+        background-color: #cfdae0;
+        background-image: url(//shelter.org.uk/__data/assets/image/0011/671627/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        text-indent: -9999em;
+    }
+    #menu-icon.active, #menu-icon:hover {
+        font-weight: normal;
+        background-color: #b6c5ce;
+    }
+    
+    /* main nav */
+    #nav {
+        clear: both;
+        position: absolute;
+        top: 0x;
+        right: 0;
+        width: 160px;
+        z-index: 10000;
+        padding: 5px;
+        background: #f8f8f8;
+        border: solid 1px #b6c5ce;
+        display: none; /* visibility will be toggled with jquery */
+    }
+    #nav li {
+        clear: both;
+        float: none;
+        margin: 5px 0 5px 10px;
+        display: block;
+    }
+    #nav a, 
+    #nav ul a {
+        font: inherit;
+        background: none;
+        display: inline;
+        padding: 0;
+        color: #666;
+        border: none;
+    }
+    #nav a:hover, 
+    #nav ul a:hover {
+        background: none;
+        color: #000;
+    }
+    
+    /* dropdown */
+    #nav ul {
+        width: auto;
+        position: static;
+        display: block;
+        border: none;
+        background: inherit;
+    }
+    #nav ul li {
+        margin: 3px 0 3px 15px;
+        display: list-item;
+    }
+    
+    
+    /* --------- SLIDING LEFTNAV ---------- */
+    
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    #content {
+        position: relative;
+    }
+    
+    .wrapper {
+        margin-left: 25px;
+    }
+    
+    #content-menu-link {
+        background-color: rgb(73, 100, 117);
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        top: 106px;
+        left: -51px;
+        padding-left: 25px;
+        padding-right: 10px;
+        -moz-transform: rotate(270deg) translate(30%, 0);
+        -webkit-transform: rotate(270deg) translate(30%, 0);
+        -o-transform: rotate(270deg) translate(30%, 0);
+        transform: rotate(270deg) translate(30%, 0);
+        background-image: url(/_designs/css/scotland_2013/main.css/menu-arrow.png);
+        background-position: 6px 10px;
+        background-repeat: no-repeat;
+    }
+    
+    .leftnav {
+        background-color: rgb(73, 100, 117);
+        padding:0;
+        width: 35%;
+        float: left;
+        clear: none;
+        margin-right: 0;
+        display: none;
+    }
+    
+    #content.nav-open {
+        width: 200%;
+        position: relative;
+    }
+    
+    .nav-open .leftnav {
+        display: block;
+    }
+    
+    .nav-open #content-article {
+        width:64%;
+        margin-left: 0;
+        background-color: #fff;
+        float: right;
+        clear: none;
+        margin-right: 0;
+        overflow: hidden;
+    }
+    
+    /* List Styles */
+    
+    .leftnav li {
+        padding-right: 0;
+        margin-bottom: 0;
+    }
+    
+    .leftnav li a {
+        color: #fff;
+        display: block;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    
+    .leftnav ul li ul {
+        border-bottom: 1px solid #3c5462;
+        font-size: 14px;
+        margin-bottom: 10px;
+        line-height: 18px;
+    }
+    
+    .leftnav ul li ul ul {
+        border-bottom: 1px solid #3c5462;
+        font-size: 12px;
+        margin-bottom: 0;
+        line-height: 16px;
+        background-color: #3c5462;
+    }
+    
+    .leftnav li.active a {
+        background-color: #3c5462;
+    }
+    
+    .leftnav li.active li a {
+        padding-left: 20px;
+    }
+    
+    .leftnav li.active li.active a {
+        background-color: #3c5462;
+    }
+    
+    .leftnav li.active li.active li a {
+        padding-left: 30px;
+    }
+    
+    .leftnav li.active li.active li.active {
+        background-color: #3c5462;
+    }
+    
+    .leftnav li.active li.active li.active li a {
+        padding-left: 40px;
+    }
+    
+    
+    .leftnav li.active ul a, .leftnav li.active li.active ul a, .leftnav li.active li.active li.active ul a {
+        background-color: transparent;
+    }
+    
+    .leftnav ul li ul a {
+        border-bottom: none;
+        font-weight: normal;
+        padding-left: 10px;
+    }
+    
+    .leftnav li li, .leftnav li li li {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 0;
+    }
+    
+    .leftnav li a {
+        color: #fff;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .leftnav li li li ul, .leftnav li li li.active {
+        background-color: transparent;
+        
+    }
+    
+    .leftnav li li li ul {
+        padding: 0;
+    }
+}
+/*
+
+/*  Tables  */
+
+#content table.table {
+width: 100%;
+margin-bottom: 15px;
+}
+
+#content .table td, th {
+padding: 5px;
+border: 1px solid #ccc;
+}
+
+#content .table th {
+font-weight: bold;
+background-color: #efefef;
+text-align: center;
+}
+
+/*  Icons  */
+
+a[href$='.pdf'] { 
+    padding: 5px 20px 5px 0;
+    background: transparent url(//www.shelter.org.uk/__data/assets/image/0006/645108/icon_pdf.gif) no-repeat center right;
+}
+a[href$='.doc'] { 
+    padding: 5px 20px 5px 0;
+    background: transparent url(//www.shelter.org.uk/__data/assets/image/0007/645109/icon_doc.gif) no-repeat center right;
+}
+
+
+/* Homepage Fittext */
+
+#home , #landing-page-heading {
+    color: #c00013;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue Condensed Bold", 'Open Sans Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 60px;
+    margin-bottom: 38px;
+    font-stretch: condensed;
+    display:block;
+    font-size: 47.2px;
+}
+
+.mainheading {
+    width:100%;
+}
+
+.contents_header {
+    font-size: 20px;
+    font-size: 2.0rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-bottom: 1.0rem;
+    color: #c00;
+}
+
+#home span {
+    color: #c00013;
+    width: 100%;
+    display: block;
+    overflow: visible;
+    line-height: 0.7;
+}
+
+#home .line1 {
+        font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue Condensed Bold", 'Open Sans Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: #ed0000;
+}
+
+#home .line2 {
+    font-size: 2.05em;
+    margin-bottom: 24px;
+}
+
+#home .line3 {
+    font-size: 1.72em;
+    margin-bottom: 15px;
+    color: #ed0000;
+}
+
+#home .line4 {
+    font-size: 1.28em;
+}
+
+.social {
+margin: 40px auto 20px;
+width: 340px;
+}
+
+/* Newsletter */
+
+
+
+.newsletter > p {
+    width: 70%;
+    font-size: 17px;
+    line-height: 22px;
+}
+.newsletter input.form-field {
+    width: 20%;
+    padding: 14px;
+
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+
+    background-color: #fcfcfc;
+
+    box-shadow: 0 1px 0 0 white, inset 0 3px 10px -5px rgba(0,0,0,0.4);
+    transition: 
+        box-shadow 150ms ease-in-out,
+        border 150ms ease-in-out,
+        undefined undefined undefined;
+
+    font-size: 15px;
+    font-style: normal;
+}
+.newsletter input.form-field:focus {
+    border: 1px solid rgba(0,150,255,0.5);
+    box-shadow: 
+        0 1px 0 0 rgba(255,255,255,0),
+        inset 0 3px 10px -5px rgba(0,0,0,0.4),
+        0 0 16px 0 rgba(0,150,255,0.5);
+}
+.newsletter input.form-field:focus {
+    border: 1px solid rgba(0,150,255,0.5);
+    box-shadow: 
+        0 1px 0 0 rgba(255,255,255,0),
+        inset 0 3px 10px -5px rgba(0,0,0,0.4),
+        0 0 16px 0 rgba(0,150,255,0.5);
+}
+.newsletter .button {
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 6px 45px 14px 45px;
+    border: 1px solid #1f7cbd;
+
+    border-radius: 4px;
+
+    background-color: #2899d1;
+    background-image: linear-gradient(180deg, #2ba3de, #258ec0);
+
+    box-shadow: 
+        inset 0 1px 0 0 rgba(255,255,255,0.4),
+        inset 0 80px 57px -60px rgba(255,255,255,0);
+    transition: 
+        box-shadow 150ms ease-in-out;
+
+    color: white;
+    text-decoration: none;
+}
+.newsletter .button:hover {
+    box-shadow: 
+        inset 0 1px 0 0 rgba(255,255,255,0.6),
+        inset 0 80px 57px -60px rgba(255,255,255,0.3);
+}
+
+
+/*Cookie Law bar */
+#cookie_message_wrapper {
+    width: 100%;
+    background: #c0d5df;
+    display: none;
+    position: fixed; 
+    bottom: 0; 
+    z-index: 1000;
+}
+
+#cookie_message {
+  width: 60%;
+  margin: 0 auto;
+  padding: 6px 0 7px 0;
+  color: #626262;
+  font-size: 12px;
+}
+
+#cookie_message_text { float: left; }
+
+#cookie_message a, #cookie_message a:link, #cookie_message a:visited {
+  color: #626262;
+  text-decoration: underline;
+}
+
+#cookie_message a:hover { color: #FFF; }
+
+#cookie_bar_close {
+  padding-right: 16px;
+  height: 13px;
+  float: right;
+  background: url(https://www.shelter.org.uk/__data/assets/image/0019/437104/crosses.png) right top no-repeat;
+  display: block;
+  margin-top: 1px;
+}
+
+#cookie_bar_close:hover {
+  background: url(https://www.shelter.org.uk/__data/assets/image/0019/437104/crosses.png) right bottom no-repeat;
+}
+
+/* Feedback button ------------------------------ */
+
+#feedback { 
+  width: 104px; 
+  position: absolute; 
+  left: 42%; 
+  z-index: 999;
+ /*  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg); 
+  -moz-transform: rotate(-90deg); 
+  -o-transform: rotate(-90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); */
+}
+
+#feedback a { 
+  display: block;
+background: #f00;
+height: 23px;
+width: 192px;
+padding: 0px 15px;
+color: #fff;
+font-size: 17px;
+font-weight: bold;
+text-decoration: none;
+}
+
+#feedback a:hover { 
+  background: #007ab7; 
+}
+
+/* Searching ------------------------------ */
+
+input.search {
+    border: 3px solid #e6e4dc;
+    width: 50%;
+    height: 39px;
+    line-height: 39px;
+    color: #85847e;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 5px;
+    float: left;
+}
+
+input.search.advicesearch {
+    width: 64%;
+}
+
+input#name {
+    border: 3px solid #e6e4dc;
+    width: 16%;
+    height: 39px;
+    color: #85847e;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 5px;
+    float: left;
+}
+
+input#email {
+    border: 3px solid #e6e4dc;
+    width: 36%;
+    height: 39px;
+    color: #85847e;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 5px;
+    float: left;
+}
+
+#skip {
+  position:absolute;
+  font-size:50%;
+  margin-left:40%;
+  top:1px;
+  z-index:-1;
+  display:none;
+}
+
+
+/* Ajax search */
+#ajax_search_container {
+  position: absolute;
+  top: 630px;
+  bottom: 0;
+  z-index: 100;
+}
+
+#header {
+  z-index: 50;
+}
+
+#search_list li, #search_list ul {
+  list-style: none !important;
+  background: none;
+  margin: 0 !important;
+  z-index: 300;
+}
+
+#search_list li {
+  padding: 0;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #CCC;
+}
+
+#search_list ul a, #no_results {
+  display: block;
+  padding: 6px 8px 8px 8px;
+  text-decoration: none;
+}
+
+#search_list h3 {
+  font-size: 0.9em;
+  margin: 0 0 2px 0 !important;
+  line-height: 1.2;
+  z-index: 301;
+  color: #FF0000;
+}
+
+#search_list {
+ 
+  display:none;
+  right: 0;
+  top: 0;
+  background: #eee;
+  width: 98%; opacity:0.9;filter:alpha(opacity=90);
+  -moz-border-radius-bottomleft:8px;
+  -webkit-border-bottom-left-radius:8px;
+  -moz-border-radius-bottomright:8px;
+  -webkit-border-bottom-right-radius:8px;
+  border: 1px solid #CCC;
+  z-index: 200;
+}
+
+#search_list p {
+  margin: 0;
+  line-height: 1.2;
+  z-index: 303;
+}
+
+.ajax_search_lineage {
+  font-size: 10px;
+  color: #666 !important;
+  margin: 0 0 2px 0 !important;
+  z-index: 303;
+}
+
+.ajax_search_summary {
+  font-size: 11px;
+  color: #000 !important;
+  z-index: 303;
+}
+
+#ajax_search_options {
+  border-bottom: 1px solid #000;
+  padding: 2px;
+  background: #555 url("//scotland.shelter.org.uk/__data/assets/image/0006/226761/search_close.gif") 3px 3px no-repeat;
+  z-index: 303;
+}
+
+#ajax_search_options p {
+  color: #CCC;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  z-index: 303;
+}
+
+#ajax_search_options p a:link, #ajax_search_options p a:visited {
+  color: #CCC;
+  text-decoration: underline
+  z-index: 303;
+}
+
+#ajax_search_close {
+  display: block;
+  float: left;
+  padding-left: 21px;
+}
+
+#more_search_results {
+  font-weight: bold;
+  font-size: 12px;
+  z-index: 303;
+}
+
+#ajax_search {
+  padding: 3px;
+  font-size: 12px;
+  height: 12px;
+}
+
+.active_search {
+  background: #FFF url("//scotland.shelter.org.uk/__data/assets/image/0011/226793/spinner.gif") 195px 2px no-repeat;
+}
+
+.search_breadcrumb {
+   font-size: 0.8em;
+}
+
+
+/* Search suggestions ------------------------------ */
+
+.search-suggestions {
+    list-style-type: none;    
+}
+
+.search-suggestions li {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1.0em;
+    padding-top: 1.0em;
+    display: block;
+    
+}
+
+
+/* Search pagination ------------------------------------*/
+.searchPagination {
+    margin: 0px auto;
+    text-align: center;
+    width: 65%;
+}
+
+.searchPagination li {
+    float:left;
+    display:block;
+    background:none;
+    margin:0 0.3em 1em 0;
+    padding:0;
+    color: #fff;
+}
+
+.searchPagination li a, .searchPagination li a:visited {
+    display:block;
+    background:#ccc;
+    border:1px solid #bbb;
+    color:#666;
+  width:15px;
+    padding:1px 5px;
+    text-decoration:none;
+    border-radius:2px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+}
+
+.searchPagination li a:hover {
+    background:#999;
+    border:1px solid #999;
+    color:#fff;
+    text-decoration: none;
+}
+
+.searchPagination .currentPage, .searchPagination .currentPage a {
+  float:left;
+    background:#CC0000 !important;
+    border:1px solid #CC0000;
+  font-weight:bold;
+    color:#fff;
+    display:block;
+  width:15px;
+    margin:0 3px 0 0!important;
+  padding:1px 5px !important;
+    border-radius:2px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+}
+
+.searchPrevious a, .searchNext a {
+    background:none !important;
+    border:none !important;
+    color:#000 !important;
+}
+
+.searchNext {
+  float:left;
+  position:relative;
+    width:40px;
+  *width:50px;
+  padding:0 5px 0 0 !important;
+}
+
+.searchPrevious {
+  float:left;
+  position:relative;
+  width:75px;
+  *width:70px;
+  text-align:right;
+  padding:0 0 0 5px !important;
+    margin-right:5px !important;
+}
+
+.searchPrevious a:hover, .searchNext a:hover {
+    color:#000;
+    text-decoration:underline !important;
+}
+
+/* View results --------------------------------------- */
+
+.viewResult {
+    text-align:right;
+    background:none;
+}
+
+.viewResult a, .viewResult a:visited {
+    display: inline-block;
+    background:#ccc;
+    border:1px solid #bbb;
+    color:#666;
+    width: auto;
+    padding:1px 5px;
+    text-decoration:none;
+    border-radius:2px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+}
+
+.viewResult a:hover {
+    display: inline-block;
+    background:#cc0000;
+    border:1px solid #cc0000;
+    color:#fff;
+    width: auto;
+    padding:1px 5px;
+    text-decoration:none;
+    border-radius:2px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+}
+
+/* Layout ------------------------------ */
+
+#content {
+    background-color: #fff;
+}
+
+
+/* KB - added */
+.floatrightimage {
+    float: right;
+    border: 1px solid #ccc;
+    padding: 2%;
+}
+
+/*KB - added */
+
+.floatleftimage {
+    float: left;
+    border: 1px solid #ccc;
+    padding: 2%;
+margin-right: 10px;
+margin-bottom: 10px;
+
+}
+
+/* Header ------------------------------ */
+
+header {
+    background-color: #f3f3f3;
+    padding-top: 28px;
+    padding-bottom: 15px;
+    color: #6c6c6c;
+}
+
+.strapline {
+    font-weight: 200;
+    font-size: 20px;
+    padding-top: 4px;
+    padding-left: 10px;
+}
+
+header input.search {
+    padding-right: 8px;
+}
+
+header button {
+    width: 80px;
+}
+
+
+/* Top Navigation */
+
+header nav ul {
+    margin-top:20px;
+    margin-bottom:15px;
+}
+
+header nav li {
+    display: inline;
+    padding-right: 28px;
+}
+
+header .active a {
+    color: #f00;
+    font-weight: normal;
+}
+
+
+header .seealso li {
+    padding-right: 15px;
+}
+
+header nav li a {
+    color: #007ab7;
+}
+
+.donate a {
+    color: #fff;
+    background-color: #c00;
+    padding: 8px 14px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* Breadcrumb ------------------------------ */
+
+.breadcrumb {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb li {
+    display: inline;
+}
+
+.breadcrumb li.active {
+    color: #c00;
+}
+
+.breadcrumb a {
+    padding-right: 15px;
+    margin-right: 5px;
+    background: url('//scotland.shelter.org.uk/__data/assets/image/0004/643315/arrow01.png') no-repeat right 3px;
+}
+
+/* Home ------------------------------ */
+
+.casestudy {
+    background-color: #10110e;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #eeede8;
+}
+
+.casestudy p, .casestudy h2 {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.casestudy h2 {
+    color: #eeede8;
+}
+
+.casestudy a, .story a {
+    color: #95dcff;
+}
+
+.carousel .casestudy p {
+    float: left;
+    width: 60%;
+    margin-left: 25px;
+    margin-bottom: 0;
+}
+
+/* Carousel */
+
+.carousel img {
+margin-bottom:0px;
+}
+
+.written {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+}
+
+.carousel .slide .top {
+    position: relative;
+}
+
+.carousel .story {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    background-color: #333;
+    background: rgba(16, 17, 14, .9);
+    padding: 10px 25px 0 25px;
+}
+
+/*
+ * responsive-carousel
+ * https://github.com/filamentgroup/responsive-carousel
+ *
+ * Copyright (c) 2012 Filament Group, Inc.
+ * Licensed under the MIT, GPL licenses.
+ */
+ 
+
+.carousel .carousel-item {
+    display: none;
+}
+.carousel .carousel-active {
+    display: block;
+}
+
+.carousel .carousel-nav {
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     z-index: 999;
+}
+
+.next {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    padding: 10px 45px 10px 15px;
+    background: #007ab7 url(//scotland.shelter.org.uk/__data/assets/image/0005/643316/arrow02.png) 80px 45% no-repeat;
+    border: none;
+    color: #fff;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.prev {
+    display: none;
+}
+
+.carousel .carousel-nav:nth-child(2) {
+    display: none;
+}
+
+.slideno {
+    float: left;
+    width: 20%;
+    margin-bottom: 5px;
+}
+
+/* Fade Transition */
+
+.carousel-fade {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; /* necessary for non-active slides */
+    display: block; /* overrides basic carousel styles */
+    -webkit-transition: opacity .5s ease;
+    -moz-transition: opacity .5s ease;
+    -ms-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+}
+.carousel-fade .carousel-active {
+    position: relative;
+}
+.carousel-fade .carousel-item,
+.carousel-fade .carousel-out {
+    opacity: 0;
+}
+.carousel-fade .carousel-active,
+.carousel-fade .carousel-in {
+    opacity: 1;
+}
+/* new carousel */
+.carousel-wrapper {
+  background-color: #e1e8ea;
+padding:15px;
+}
+
+.story3 {
+  float:left;
+}
+.story3 p{
+  background-color:#2e91c1;
+  color:#fff;
+  padding:5px;
+  font-size:0.9em;
+}
+
+.blue-button {
+background-color: #007ab7;
+border: none;
+color: #fff;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 1em;
+float: left;
+cursor: pointer;
+padding:10px;
+margin: -22px 0px 0px 0px;
+float:right;
+width: 93%;
+}
+
+.red-button {
+border: none;
+color: #2e91c1;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+float: left;
+cursor: pointer;
+padding:10px;
+margin: 12px 0px 0px 15px;
+float: right;
+clear:both;
+z-index:2;
+line-height:1.4em;
+font-size: 1.1em;
+text-decoration: none;
+}
+.red-button:hover {
+text-decoration: none;
+}
+
+.grey-button {
+background-color: #626363;
+border: none;
+color: #fff;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 1em;
+float: left;
+cursor: pointer;
+padding:10px 15px;
+margin: 0px 0px 2px 2px;
+float: right;
+clear:both;
+z-index:2;
+line-height:1.5em;
+font-weight: 200;
+}
+.grey-button:hover {
+text-decoration: none;
+}
+.count{
+  font-size: 3em;
+}
+.punchy{
+  font-size: 1em;
+color: #fff;
+background-color: #c62b37;
+padding: 6px;
+display: block;
+margin: 0px 23px 0px 0px;
+
+}
+.carousel-suppport {
+  font-size: 0.9em
+}
+
+
+.bird {
+  background: url("//scotland.shelter.org.uk/__data/assets/image/0004/701194/birdbox.gif
+") no-repeat left;
+  display: block;
+  height:34px;
+  padding: 10px 0px 0px 25px;
+
+}
+
+.mail {
+  background: url("//scotland.shelter.org.uk/__data/assets/image/0005/701195/mail.gif") no-repeat left;
+  display: block;
+  height:34px;
+  padding: 10px 0px 0px 30px;
+
+}
+
+.next {
+  display:none;
+}
+/* new carousel */
+
+/* Articles ------------------------------ */
+
+.standfirst {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+/* Article Boxouts */
+
+#content aside,
+article nav, #page_menu {
+ padding-top: 15px;
+ margin-bottom: 20px;
+}
+
+#page_menu ul {
+    padding-left: 3%;
+    padding-bottom: 20px;
+}
+#content article ul li, #page_menu ul li {
+    width: 97%;
+}
+#content aside ul {
+    padding-left: 0;
+}
+
+aside.action {
+    background: #eae3e1;
+    position:relative;
+}
+
+aside.action img.video {
+    width: 100%;
+}
+
+aside.action .point {
+    position:absolute;
+    left: -31px;
+    top: 0;
+}
+
+article nav {
+    background-color: #e6ecef;
+}
+article nav h2 {
+    padding-left: 10px;
+}
+ul#article-contents {
+    padding-left: 0;
+}
+ul#article-contents +p.map {
+    border-top: 1px solid #ccc;
+    background-position: 0 1.5em;
+    padding-top: 1.5em;
+}
+
+article nav li, #page_menu ul li {
+    list-style-type: none;
+    display: block;
+    padding: 7px 2px 7px 10px;
+}
+
+article nav li.active, article nav li:hover {
+    background-color: #cfdae0;
+    font-weight: normal;
+}
+
+article nav a:hover {
+    text-decoration: none;
+}
+
+article nav li a, #page_menu ul li a {
+    color: rgb(98,98,98);
+}
+
+#page_menu ul li {
+    font-weight: bold;
+}
+
+#page_menu ul li a {
+    font-weight: normal;
+}
+
+.map {
+    background: url(//scotland.shelter.org.uk/__data/assets/image/0003/643323/sco_map.gif) 0 0 no-repeat;
+    background-size:25px;
+    font-size: 12px;
+    padding-left: 35px;
+    padding-top: 8px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+#summary {
+    background-color: #c0d5df;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#summary h1 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #3a87bf;
+}
+
+#summary h2 {
+    color: rgb(98,98,98);
+    font-weight: bold;
+}
+
+#summary > * {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#content #summary ul {
+    font-size: 18px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#summary li {
+    margin-bottom: 20px;
+    background: url('//scotland.shelter.org.uk/__data/assets/image/0005/643316/arrow02.png') no-repeat left top;
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#summary hr {
+    border-color: #fff;
+}
+
+#content article button {
+    width: 110px;
+}
+
+.share {
+    text-align:right;
+}
+
+#back-to-top {
+    background: url("http://www.reclaimyourfees.com/img/arrow-up-large.png") no-repeat scroll center center rgb(221, 221, 221);
+    bottom: 20px;
+    display: none;
+    height: 46px;
+    position: fixed;
+    right: 20px;
+    text-indent: -9999px;
+    transition: all 0.2s ease 0s;
+    width: 45px;
+    z-index: 100;
+}
+#back-to-top:hover, #back-to-top:active {
+    background-color: #cc0000;
+}
+
+.email {
+    background: url('//scotland.shelter.org.uk/__data/assets/image/0008/643319/email.gif') no-repeat top right;
+}
+
+.print {
+    background: url('//scotland.shelter.org.uk/__data/assets/image/0020/643322/print.gif') no-repeat top right;
+}
+
+.email, .print {
+    padding-top:50px;
+    margin-left:20%;
+    display: block;
+    float: right;
+}
+
+/* Left Navigation ------------------------------ */
+
+.leftnav {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.leftnav a.active {
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    /* color: #c00; */
+}
+
+.leftnav a {
+    color: rgb(98,98,98);
+    font-weight: normal;
+}
+
+.leftnav li {
+    margin-bottom: 12px;
+    padding-right: 10px;
+}
+
+.leftnav li li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    line-height: 18px;
+    line-height: 1.8rem;
+}
+
+.leftnav li li li {
+    font-size: 12px;
+    margin-bottom: 8px;
+    line-height: 16px;
+    line-height: 1.6rem;
+}
+
+.leftnav li li li.active {
+    background-color: #e6ecef;
+    color: #c00;
+}
+
+.leftnav li li li li {
+    padding-left: 0;
+    line-height: 14px;
+    line-height: 1.4rem;
+}
+
+.leftnav li li .active {
+    border-top: none;
+}
+
+.leftnav li li ul,.leftnav li li li .active  {
+    background-color: #e6ecef;
+    color: #c00;
+    padding: 5px;
+}
+
+.leftnav li li li ul,.leftnav li li li .active  {
+    background-color: #e6ecef;
+    color: #c00;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.leftnav ul li ul {
+    border-bottom: 1px solid #ccc;
+}
+
+.leftnav ul li ul ul {
+    border-bottom: none;
+}
+
+.leftnav li li ul  {
+    background-color: #e6ecef;
+    color: #c00;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.leftnav li li li ul  {
+    background-color: #e6ecef;
+    color: #c00;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    
+}
+
+
+/* Landing Pages & Search - KB ------------------------------ */
+
+.sections, .topics, .contents, .search_results_list {
+    list-style-type: none;
+    padding-bottom: 50px;
+}
+
+.topics, .search_results_list {
+    padding-bottom: 0;
+}
+
+.sections h2, .topics h2, .contents h2 {
+    font-size: 18px;
+}
+
+.sections li, .topics li, .search_results_list li {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    
+}
+
+.sections li, .topics li {
+    height: 75px;
+    
+}
+
+.search_results_list li {
+    height: auto;
+}
+
+.search_results_list+p {
+    margin-top: 2em;
+}
+
+.sections li {
+    float: left;
+    width: 42%;
+    display: block;
+    margin-right: 7%;
+}
+
+/* added - KB */
+#content article ul.contents {
+   padding-left: 0;
+}
+
+.contents li {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    height:160px;
+}
+
+.section-contents {
+    border-bottom: 1px solid #ccc;
+}
+
+.suggestions {
+    font-size: 12px;
+    color: #797979;
+}
+
+#advice-search {
+    background-color: #007ab7;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+.useful-info {
+    padding-top: 50px;
+}
+
+.useful-info ul {
+    list-style-type: none;
+}
+.useful-info li {
+    margin-bottom: 5px;
+}
+
+.getadvice {
+    background: url('//scotland.shelter.org.uk/__data/assets/image/0018/643320/phone.png') no-repeat right top;
+}
+#helpline {
+   padding-top: 2em;
+   clear:both;
+}
+#step {
+    padding-bottom: 1em;
+}
+#step .selected {
+    font-weight: bold;
+}
+
+#section-heading{
+font-size: 25px;
+font-size: 2.5rem;
+font-weight: 400;
+clear:both;
+}
+
+
+.phone {
+    color: #f00;
+    font-size: 24px;
+}
+
+/* Jargonbuster */
+ul.alphabet {
+    list-style: none;
+}
+ul.alphabet li {
+    float: left;
+    width: auto;
+    margin-right: 0.5em;
+}
+#topic_pagelist img {
+    display: inline;
+}
+#topic_pagelist {
+    margin-bottom: 1em;
+    border-top: 1px dotted #ccc; 
+    padding-top: 20px;
+}
+#topic_numbers {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+
+/* News */
+
+
+.news li {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    list-style: none;
+}
+.news_thumb {
+    float: left;
+    margin-right: 12px;
+}
+
+.newssidebar {
+    padding-top: 59px;
+}
+
+#bodycontent {
+    margin: 10px 0 0 0;
+}
+
+.news_story_body {
+    margin: 12px !important;
+}
+
+.news_thumb img {
+    width: 128px;
+    height: 128px;
+}
+
+p.published_date {
+    font-size: 0.8571em;
+    color: #666666 !important;
+    margin: .25em 0 .25em 0;
+}
+
+.news_listing_item h3 {
+    margin-top: 0 !important;
+}
+
+.news_listing_item {
+    margin: 0 0 14px;
+    padding: 0 0 10px 0px;
+    display: block;
+    border-bottom: 1px dotted #999;
+}
+
+.news_listing_item  h3 a:link, .news_listing_item  h3 a:visited {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.news_listing_item  h3 a:hover {
+    color: #666666;
+    text-decoration: underline;
+}
+
+/* KB - added */
+p.arrow {
+    color: #f00;
+    background: url('//scotland.shelter.org.uk/__data/assets/image/0006/643317/arrow03.png') no-repeat left top;
+    font-size: 2rem;
+    font-weight: 200;
+    padding-left: 45px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    margin-bottom: 3px;
+    line-height: 3rem;
+}
+
+blockquote {
+    margin: 0 2em 1em;
+    color: #333;
+}
+
+p.published_date {
+    font-size: 0.8571em;
+    color: #666666;
+    margin: 3px 0 2px 0;
+}
+
+#banner {
+    display: none;
+}
+
+
+
+/** General feed box styles **/
+.feedBox {
+    padding: 10px;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+
+.feedBox a:hover {
+    color:#000;
+}
+
+#roof_blog_box h2 a:link, #roof_blog_box h2 a:visited, #twitterFeed h2 a:link, #twitterFeed h2 a:visited {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+#roof_blog_box h2 a:hover, #twitterFeed h2 a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+a.feed_link {
+    background: url(//scotland.shelter.org.uk/__data/assets/image/0008/66455/feed_12_bluebg.gif) left 3px no-repeat;
+    padding: 0 0 0 16px;
+    font-size: 0.9286em;
+    display: block;
+    margin-top: 10px;
+}
+
+a.feed_link:hover {
+    color: #000000;
+}
+
+.blog_intro {
+    color: #666666;
+    font-size: 0.9286em;
+    line-height: 1.35;
+    padding: 0 0 10px 0;
+    margin-bottom: 3px;
+}
+
+/** ROOF feed **/
+#roof_blog_box {
+    background-color:#e0dad4;
+    padding:15px 10px 10px 10px;
+}
+
+#roof_blog_box h2 a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+#roof_blog_box h2 {
+    width: 111px;
+}
+
+#roof_thumb {
+    float: right;
+    margin: -8px -8px 0 0;
+}
+
+#roof_blog_box .blog_intro {
+    border-bottom: 1px solid #aaa;
+}
+
+#roof_blog_box h3 {
+    color: #FF0000;
+    margin-bottom: 3px;
+}
+
+#latest_roof_post {
+    padding: 0 0 10px 0;
+    font-size: 0.9286em;
+    line-height: 1.35;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #aaa;
+}
+
+#roof_blog_box .readmore_link {
+    padding-right: 9px;
+    background: url(//scotland.shelter.org.uk/__data/assets/file/0010/66376/arrow_bluebg.gif) right 4px no-repeat;
+}
+
+/** Gallery **/
+.news_gallery_thumb {
+    width: 122px;
+    float: left;
+    display: inline;
+    margin-right: 10px;
+}
+
+.news_gallery_thumb_right {
+    width: 122px;
+    float: right;
+    display: inline;
+}
+
+.disclose_link {
+    font-size: 90%;
+}
+
+.gallery_box ul {
+    list-style: none;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.gallery_box li {
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 6px 6px 0 !important;
+    float: left;
+}
+
+.gallery_box li a:link, .gallery_box li a:visited {
+    display: block;
+    padding: 2px;
+    border: 1px solid #DDDDDD;
+}
+
+.gallery_box li a:hover {
+    display: block;
+    padding: 2px;
+    border: 1px solid #BBBBBB;
+}
+
+.gallery_box li a img {
+    display: inline;
+}
+
+#video_box { float: right; clear: both; width: 185px; padding: 5px 5px 0 5px; border: 1px solid #CCC; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+
+#video_box p {
+font-size: 12px;
+margin-bottom: 7px; }
+
+#video_box img {
+  margin-bottom: 5px;
+}
+.news_listing_item p {
+  margin-bottom: 0 !important;
+} 
+
+#twitterFeed {
+    background: #d7e3e9 url("//scotland.shelter.org.uk/__data/assets/image/0014/232133/twitter_bird_blue.gif") no-repeat top right;
+    padding: 10px;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+
+#twitterFeed h2 a:link, #twitterFeed h2 a:visited {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+#twitterFeed h2 a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+#twitterFeed h2 {
+    width: 111px;
+}
+
+#twitterIcon {
+    float: right;
+    margin: -8px -8px 0 0;
+}
+
+#twitterFeed #blog_intro {
+    color: #666666;
+    font-size: 0.9286em;
+    line-height: 1.35;
+    padding: 0 0 10px 0;
+    margin-bottom: 3px;
+    border-bottom:1px solid #b1c6d2;
+}
+
+#twitterFeed h3 {
+    color: #FF0000;
+    margin-bottom: 3px;
+}
+
+#twitterFeed .feed_link {
+    background: url(//scotland.shelter.org.uk/__data/assets/image/0008/66455/feed_12_bluebg.gif) left 4px no-repeat;
+    padding:1px 0 0 15px;
+    font-size: 0.9286em;
+    display: block;
+}
+
+#twitterFeed a.feed_link:link, #twitterFeed a.feed_link:visited {
+    margin-top: 10px;
+}
+
+#twitterFeed a:hover {
+    color: #000000 !important;
+}
+
+ul#tweets {
+    list-style-type:none;
+    margin:0;
+}
+
+li.tweet {
+    font-size:0.9em;
+    padding:0.7em 0;
+    line-height:1.5em;
+    border-bottom:1px solid #b1c6d2;
+    color:#000;
+}
+#story_sharing_box{
+    background:#fafafa;
+    border:1px solid #CCC;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    padding:12px 30px;
+    margin-bottom:24px;
+    font-size:10px;
+    text-shadow:#FFF 0 1px 1px;
+    height:30px;
+}
+
+#story_sharing_box a{
+    float:right;
+    margin-left:5px
+}
+
+#story_sharing_box p{
+    font-size:14px;
+    margin:0
+}
+
+#story_sharing_widget div{
+    float:left
+}
+.smi_small a:focus,.smi_large a:focus{
+    outline:0
+}
+
+.smi_small a,.smi_large a{
+    height:33px;
+    text-indent:-9999px;
+    display:block
+}
+
+.smi_small a{
+    width:42px;
+    background-image:url('//shelter-england-images.s3.amazonaws.com/core-elements/sn_small_sprites.png')
+}
+
+.smi_large a{
+    width:128px;
+    background-image:url('//shelter-england-images.s3.amazonaws.com/core-elements/sn_large_sprites.png')
+}
+
+.smi_fb,#fb_story_share{
+    background-position:0 -33px
+}
+
+.news blockquote{
+    float:right;
+    width:60%;
+    clear:both;
+    color:#666;
+    background:#EEE url(//england.shelter.org.uk/__data/assets/file/0005/295268/lquote.gif) left top no-repeat;
+    font-size:1.1429em;
+    margin:1em 0 1em .5em;
+    padding:0
+}
+
+.news blockquote p{
+    line-height:1.3;
+    background:url(//england.shelter.org.uk/__data/assets/file/0006/295269/rquote.gif)right bottom no-repeat;
+    margin:0;
+    padding:1em
+}
+
+/** Forms: General */
+
+#formErrors {
+    color: #c00013;
+}
+
+#customForm legend,
+.custom-form legend {
+    color: #C00013;
+    font-size: 1.375em;
+    padding: 1em 0;
+}
+#customForm .fieldDesc,
+.custom-form .fieldDesc,
+.detailsSubQuestionDesc h4 { 
+    font-size: 1.125em;
+    font-weight: bold;
+    padding: 0.47222222em 0;
+    color: #626262;
+}
+
+#customForm .inputfield,
+.custom-form .inputfield,
+.detailsSubQuestion {
+    min-height: 2.8125em;
+    margin-bottom: 10px;
+}
+
+#customForm input, 
+#customForm select,
+.custom-form input,
+.custom-form select {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.125em;
+    color: rgb(98,98,98);
+}
+
+#customForm select,
+.custom-form select {
+    margin-top: 10px;
+    max-width: 94%;
+}
+
+#customForm input[type="text"],
+.custom-form input[type="text"],
+#customForm input[type="password"],
+.custom-form input[type="password"] {
+    width: 95%;
+    border: 3px solid #e6e4dc;
+    height: 2.4375em;
+    line-height: 2.4375em;
+    padding-left: 0.5em;
+}
+#customForm ul li,
+.custom-form ul li {
+    list-style-type: none;
+    background-image: none;
+    padding: 0;
+}
+#customForm input[type="button"],
+.custom-form input[type="button"],
+#customForm input[type="submit"],
+.custom-form input[type="submit"],
+.custom-form button {
+    background-color: #007AB7;
+    border: medium none;
+    color: #FFFFFF;
+    float: left;    
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue Condensed Bold", 'Open Sans Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-stretch: condensed;
+    font-size: 18px;
+    margin: 0;
+    cursor: pointer;
+    padding: 0.75em;
+    width: auto;
+    height: auto;
+}
+
+
+
+#customForm .requiredMsg,
+.custom-form .requiredMsg {
+    position: relative;
+    top: -3px;
+    margin-bottom: 1em;
+}
+
+#customForm .requiredMsgArrow,
+.custom-form .requiredMsgArrow {
+    background: url(//scotland.shelter.org.uk/?a=381547) no-repeat -20px 0 transparent;
+    height: 7px;
+}
+#customForm .requiredMsgText,
+.custom-form .requiredMsgText {
+    background: #FF4040;
+    font-size: 1.2em;
+    padding: 0.5em;
+    color: white;
+    width: 94%;
+}
+
+#customForm input[type="submit"],
+.custom-form input[type="submit"] {
+    margin-top: 2.4375em;
+}
+
+.req {
+    color: #CC0000;
+}
+
+.fieldDesc p {
+    margin-bottom: 0;
+}
+/*Forms in action boxouts*/
+aside.action.form {
+    padding-bottom: 1em;
+}
+aside.action form {
+    width: 100%;
+}
+aside.action.form input[type="text"] {
+    width: 94%;
+    border: 3px solid #9f9f9f;
+    height: 2.4375em;
+    padding-left: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: #f9f9f9;
+}
+
+aside.action.form input[type="submit"] {
+    background-color: #007AB7;
+    border: medium none;
+    color: #FFFFFF;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue Condensed Bold", 'Open Sans Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-stretch: condensed;
+    font-size: 1.3846154em;
+    height: 2.61em;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Legacy enquiry form */
+.legacy-form #lookup_postcode {
+    width: 10em;
+}
+.postcode-lookup-wrapper .postcode-wrapper {
+    float: left;
+    margin-right: 1.5em;
+}
+#enterAddressLink {
+    margin-bottom: 2em;
+}
+.legacy-form fieldset {
+    clear: both;
+}
+
+/* Donate */
+#breadcrumbtrail { display: none !important; }
+
+#donate-heading {
+    margin-top: 10px;
+    line-height: 1em
+}
+
+.radio_styled
+{
+    float: left;
+    background: url(//scotland.shelter.org.uk/content/remote_content/donation-landing/2012/radiobuttons.png);
+    height: 22px;
+    width: 22px;
+    overflow: hidden;
+}
+.gift_description input {
+    display:none;
+}
+.radio_styled_selected
+{
+    background-position: 0 22px;
+}
+#frequency_wrapperlabel, #frequency_wrapper input, .radio_styled
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+#content_div_423574 > h1 {
+    padding-left: 10px;
+}
+
+#frequency_wrapper
+{
+    background: #f3f3f3;
+    padding: 15px 5px 5px;
+    width: 726px;
+    display: inline-block;
+}
+#frequency_wrapper h2
+{
+    color: black;
+    float: left;
+    padding-left:6px;
+}
+#frequency_wrapper label
+{
+    font-size: 22px;
+}
+#frequency_wrapper .radio_styled
+{
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+}
+#regular_gift_radio_wrapper, #single_gift_radio_wrapper
+{
+    margin-left: 30px;
+    float: left;
+}
+#single_gift_wrapper
+{
+    display: none;
+}
+.gift_amounts_images
+{
+    height: 317px;
+    overflow: hidden;
+}
+.gift_amounts_images img
+{
+    float: left;
+    width: 317px;
+    margin-left: 1px;
+    cursor: pointer;
+}
+.gift_amounts_bottom
+{
+    border: 2px solid red;
+    border-top: none;
+    margin-right: 1px;
+}
+.gift_amounts_buttons_wrapper
+{
+    background: red;
+    font-size: 30px;
+}
+.gift_amounts_buttons_wrapper div
+{
+    background: red;
+    float: left;
+ 
+    height: 50px;
+    padding: auto;
+    cursor: pointer;
+    border-top: 2px solid red;
+    color: white;
+}
+.gift_amounts_buttons_wrapper .amount_selected_button
+{
+    background: white !important;
+    color: red !important;
+}
+.gift_amounts_buttons_wrapper .radio_styled
+{
+    margin-left: 115px;
+    margin-right: 10px;
+    position: relative;
+    top: 13px;
+}
+.gift_amounts_buttons_wrapper label
+{
+    position: relative;
+    top: 7px;
+}
+#regular_gift_20, #single_gift_50
+{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+.gift_amounts_text
+{
+    padding: 20px 20px 10px;
+    padding-right: 10px;
+}
+#custom_amount_wrapper
+{
+    vertical-align: bottom;
+    background: #f3f3f3;
+    padding-top: 20px;
+}
+#custom_amount_wrapper *
+{
+    float: left;
+}
+#custom_amount_text
+{
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 13px 20px;
+}
+#custom_amount_wrapper #custom_amount
+{
+    cursor: text;
+    -webkit-box-shadow: inset 1px 1px 2px #CCCCCC;
+    -moz-box-shadow: inset 1px 1px 2px #CCCCCC;
+    box-shadow: inset 1px 1px 2px #CCCCCC;
+    border: none;
+    border-top: 1px solid #929292;
+    border-left: 1px solid #929292;
+    border-bottom: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    background: url(//england.shelter.org.uk/?a=377770) no-repeat 15px 13px white;
+    color: #666666;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 36px;
+    padding: 8px 0 10px 40px;
+
+}
+#custom_amount_wrapper #submit_button
+{
+    top: 0 !important;
+    padding: 13px !important;
+    float: left !important;
+}
+.gift_amounts_text_left, .gift_amounts_text_right
+{
+    float: left;
+}
+.gift_left_quote p.quote
+{
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 0.6em;
+    padding-left: 22px;
+}
+p.quoter_name
+{
+    bottom: 10px;
+    color: #333333;
+    font-size: 17px;
+    margin-left: 23px;
+}
+
+img.gift_secure_trading {
+    margin-left: 33px;
+}
+
+
+.redButton {
+    background:red!important;
+    background:-moz-linear-gradient(top,#f00 0,#df0000 100%)!important;
+    background:-webkit-gradient(linear,lefttop,leftbottom,color-stop(0%,#f00),color-stop(100%,#df0000))!important;
+    background:-webkit-linear-gradient(top,#f00 0,#df0000 100%)!important;
+    background:-o-linear-gradient(top,#f00 0,#df0000 100%)!important;
+    background:-ms-linear-gradient(top,#f00 0,#df0000 100%)!important;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0000',endColorstr='#DF0000',GradientType=0)!important;
+    background:linear-gradient(top,#f00 0,#df0000 100%)!important;
+    border: 1px solid #660000 !important;
+    border-radius: 3px 3px 3px 3px !important;
+    color: #FFFFFF !important;
+    cursor: pointer !important;
+    display: block !important;
+    float: right !important;
+    font-size: 20px !important;
+    padding: 10px 30px !important;
+    position: relative !important;
+    text-decoration: none !important;
+    text-shadow: 0 -1px 0 #660000 !important;
+    top: 8px !important;
+}
+
+.redButton:hover {
+    background: none repeat scroll 0 0 red !important;
+}
+#frequency_wrapper {
+    margin-top: 50px;
+    background: none;
+    display: block;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#secondarynav {
+    display: none;
+}
+
+#amount_buttons_wrapper a {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 22px;
+    background:red!important;
+    background:-moz-linear-gradient(top,#f00 0,#df0000 100%)!important;
+    background:-webkit-gradient(linear,lefttop,leftbottom,color-stop(0%,#f00),color-stop(100%,#df0000))!important;
+    background:-webkit-linear-gradient(top,#f00 0,#df0000 100%)!important;
+    background:-o-linear-gradient(top,#f00 0,#df0000 100%)!important;
+    background:-ms-linear-gradient(top,#f00 0,#df0000 100%)!important;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0000',endColorstr='#DF0000',GradientType=0)!important;
+    background:linear-gradient(top,#f00 0,#df0000 100%)!important;
+    border: 1px solid #660000 !important;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    text-shadow: 0 -1px 0 #660000 !important;
+    width: 30%;
+}
+
+#amount_buttons_wrapper a:hover {
+        background: none repeat scroll 0 0 red !important;
+}
+
+
+#pre_donate_strapline {
+    font-size: 20px;
+}
+#frequency_wrapper label, #amount_buttons_wrapper p {
+    font-size: 18px;
+}
+#regular_gift_radio_wrapper, #single_gift_radio_wrapper {
+    margin-left: 0;
+    margin-right: 15px;
+}
+#custom_amount_wrapper #custom_amount {
+    padding: 4px 0 5px 40px;
+    background: url("//scotland.shelter.org.uk/?a=377770") no-repeat 11px 6px white;
+    font-size: 24px;
+    line-height: 30px;
+}
+#custom_amount_wrapper {
+    padding-top: 0;
+    background: none;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+}
+#custom_amount_wrapper #submit_button {
+    padding: 5px 13px !important;
+    width: 50%;
+}
+#pre_donate_related {
+    margin-top: 20px;
+    padding: 20px;
+}
+#pre_donate_related ul {
+     
+    border-bottom: medium none;
+    border-top: 1px dotted #666666;
+    margin-top: 10px;
+    padding-top: 10px;
+    list-style: none;
+
+}
+#pre_donate_related li {
+    border: medium none;
+    float: left;
+    margin: 5px 0;
+    width: 220px;
+}
+#pre_donate_related a {
+    float: left;
+    padding: 0 0 0 14px;
+    width: auto;
+    color: #007ab7;
+    text-decoration: none;
+}
+
+
+/* Get Involved */
+.featured h3 {
+    color: #b14c4c;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue Condensed Bold", 'Open Sans Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-stretch: condensed;
+    margin-top: 20px;
+}
+
+.getinvolved-carousel .slideno {
+        bottom: 60px;
+        float: none;
+        width: auto;
+        position: absolute;
+}
+
+.getinvolved-carousel .slide-link {
+    position: absolute;
+    bottom: 90px;
+}
+
+.getinvolved-carousel {
+    margin-bottom: 20px;
+}
+
+.getinvolved-carousel .carousel-nav {
+     bottom: 30px;
+}
+
+.getinvolved-carousel .story {
+    padding-bottom: 110px;
+}
+
+.getinvolved-carousel h3 {
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.slide .attribution {
+    font-size: 12px;
+    position: absolute;
+    bottom: -10px;
+}
+.slide .attribution a {
+    color: #949494; 
+}
+
+#getinvolved-landing h2.arrow {
+    margin-top: 20px;    
+}
+
+.carousel-active {
+    z-index: 2;
+}
+
+/* Campaign sign up and sharing buttons */
+.signup-button {
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    padding: 8px 14px;
+    background-color: #007AB7;
+    display: block;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue Condensed Bold", 'Open Sans Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-stretch: condensed;
+    width: 3em;
+    margin-bottom: 10px;
+    font-size: 1.125em;
+}
+.share-button {
+    border-radius: 5px 5px 5px 5px;
+    color: white !important;
+    display: block;
+    margin: 6px 0;
+    padding: 8px 20px 8px 40px;
+    text-decoration: none;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue Condensed Bold", 'Open Sans Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.125em;
+    font-stretch: condensed;
+}
+#fbButton2013 {
+   background: #007AB7 url("http://scotland.shelter.org.uk/?a=369772") no-repeat 5px 4px;
+}
+#tweetButton2013 {
+    background: #67BBBF url("http://scotland.shelter.org.uk/?a=369772") no-repeat 3px -47px;
+}
+
+/* KB - added hlbox & intro styling */
+
+p.hlbox {
+    border: 1px solid #ccc;
+    padding: 0.5em 1em !important;
+    background: #c0d5df;
+    clear: both;
+}
+
+p.intro {
+    font-size: 110%;
+
+}
+
+#content article button {
+    width: 110px;
+}
+
+/* Rethink Renting */
+#rethink-renting-landing .standfirst {
+    margin-top: 1.5em;
+}
+
+.campaign-montage img {
+    float: left;
+    margin-right: 3%;
+    margin-bottom: 3%;
+}
+
+.campaign-montage img.square {
+    max-width: 28.7%;
+}
+.campaign-montage img.portrait {
+    max-width: 19.1%;
+}
+.campaign-montage img.landscape {
+    max-width: 43.1%;
+}
+
+#campaigns-header .story {
+    position: relative;
+    background-color: transparent;
+    color: #333333;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#campaigns-header .story a {
+    color: #007AB7;
+}
+
+
+/* Policy Library */
+
+
+.campaignfield {
+    background-color: #fff;
+    border-color: #666666 #CCCCCC #CCCCCC #666666;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 13px;
+    margin: 0;
+    padding: 2px;
+    width: 185px;
+}
+
+#pl_searchbox {
+    width: 100%;
+    background: url(//scotland.shelter.org.uk/__data/assets/image/0017/60911/whitepixel.gif) left top repeat-x #EEEEEE;
+    border-top: 3px solid #DDDDDD;
+    margin:0 0 1em 0;
+}
+
+#pl_searchbox legend {
+    font-weight: bold;
+    padding-left: 0;
+}
+
+#pl_searchbox h2 {
+    margin: 0 0 .8em 0;
+}
+
+
+#pl_search_one {
+    padding:0.5em 12px;
+    border-bottom: none !important;
+    position: relative;
+}
+
+#pl_search_two {
+    padding:0.5em 12px 0.3em 12px;
+    position: relative;
+    border-top: 1px solid #FFFFFF;
+}
+
+#pl_search_three {
+    position: relative;
+    padding: 0.3em 12px 0.5em 12px;
+    border-top: 1px solid #FFFFFF;
+}
+
+#pl_search_four {
+    border-top: 1px solid #ffffff;
+    padding: 12px;
+}
+
+#pl_doctype {
+    position: absolute;
+    bottom: 15px;
+    right: 12px;
+    width: 235px;
+    margin: 0;
+}
+
+
+#pl_country {
+    float: right;
+    border-bottom: 1px #CCCCCC solid;
+    margin-bottom: 20px;
+}
+
+#pl_country label {
+    font-size: 0.8571em;
+}
+
+/* added lower ul list - KB */
+
+.leftnav li li ul  {
+    background-color: #e6ecef;
+    color: #c00;
+    padding: 5px;
+    padding: 0.5rem;
+    }
+
+.leftnav li li ul  {
+    background-color: #e6ecef;
+    color: #c00;
+    /* CR Changed padding to top as well */
+    padding: 5px;
+}
+
+/* split into different classes  - KB */
+
+.leftnav li li li ul  {
+    background-color: #e6ecef;
+    color: #c00;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+
+}
+
+.leftnav li li li .active  {
+    background-color: #e6ecef;
+    color: #c00;
+
+/* removed padding - KB
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    */
+
+}
+
+
+.leftnav ul li ul {
+    border-bottom: 1px solid #ccc;
+}
+
+#pl_doctype select {
+    width: 100%;
+}
+
+#pl_subject {
+    float: left;
+    width: 70%;
+    margin: 0 0 12px 0;
+}
+
+#pl_subject select {
+    width: 100%;
+}
+
+#scotland_search {
+margin-left: 12px;
+}
+
+
+#pl_date tr {
+    width: 200px;
+    float: left;
+}
+
+#from_date {
+    float: left;
+}
+
+#to_date {
+    float: right;
+}
+
+.pl_button input {
+    width:250px;
+    text-align: center;
+    padding: 5px 20px;    
+    background: url(//scotland.shelter.org.uk/__data/assets/image/0006/60909/searchbutton_bg.gif) left top repeat-x #333333;
+    border-top: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-bottom: 1px solid #999999;
+    border-right: 1px solid #999999;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    color: #FFFFFF;
+    text-shadow: #000000 0 0 0;
+    clear: none;
+
+}
+
+.pl_button input:hover {
+    cursor:pointer;
+}
+
+.pl_button {
+    float:left;
+}
+
+#searchToggle {
+    padding:5px;
+}
+
+#keyword_search {
+    float: left;
+    display: inline;
+    clear: right;
+    margin-top: 15px;
+    margin-bottom: 1px;
+    text-align: right;
+    padding-left: 3px;
+    border: 1px solid #c9c9c9;
+    -moz-border-radius-topleft: 3px;
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    background-color: #e3e3e3;
+    height: 28px;
+    margin:0;
+}
+
+#keyword_search span input {
+    text-align: center;
+    height: 28px;
+    background: url(//scotland.shelter.org.uk/__data/assets/image/0006/60909/searchbutton_bg.gif) left top repeat-x #333333;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    color: #FFFFFF;
+    text-shadow: #000000 0 0 0;
+    clear: none;
+}
+
+#searchbutton:hover {
+    background: url(//scotland.shelter.org.uk/__data/assets/image/0006/60909/searchbutton_bg.gif) left -20px repeat-x #000000;
+    color: #CCCCCC;
+    text-shadow: #000000 0 0 2px;
+    cursor: pointer;
+}
+
+#queries_full_text_query {
+    width: 250px;
+    float:  left;
+    height: 20px;
+    border-bottom: 1px solid #b4b4b4;
+    border-right: 1px solid #b4b4b4;
+    border-top: 1px solid #999999;
+    border-left: 1px solid #999999;
+    -moz-border-radius-topleft: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    margin: 3px 0 0 0;
+    font-size: 14px;
+    padding: 0 2px 0 0;
+}
+
+#toggle {
+    font-size: 0.9286em;
+    margin-left: 5px;
+    padding-left: 12px;
+    background: url(//scotland.shelter.org.uk/__data/assets/image/0004/60907/disclose.gif) left 3px no-repeat;
+}
+
+#no_results {
+font-weight: bold;
+color: #FF0000 !important;
+margin: 20px 0 20px 0;
+}
+
+legend {
+padding-bottom: 5px;
+}
+
+.pl_results {
+margin-top: 20px;
+}
+
+/* Results styles */
+
+div.pl_item {
+    padding: 8px 0 0 0;
+    margin: 0 0 30px 0;
+}
+
+div.document_coverage, div.document_published {
+    float: left;
+    display: inline;
+    margin-right: 10px;
+    font-size: 0.8571em;
+    color: #666666;
+}
+
+p.document_summary {
+    clear: both;
+    line-height: 1.4em !important;
+    padding-top: 5px;
+}
+
+/* added KB */
+
+blockquote{
+    float:right;
+    width:40%;
+    clear:both;
+    color:#666;
+    background:#EEE url(//england.shelter.org.uk/__data/assets/file/0005/295268/lquote.gif) left top no-repeat;
+    font-size:1.1429em;
+    margin: 1.5em 0.5em 1.5em 1.5em;
+    padding:0;
+}
+
+/* added KB */
+
+blockquote p{
+    line-height:1.3;
+    background:url(//england.shelter.org.uk/__data/assets/file/0006/295269/rquote.gif)right bottom no-repeat;
+    margin:0;
+    padding:1em;
+}
+
+/* added fix for red arrow in news listings  - KB */
+
+.news_listing_item h3 img {
+    display: inline-block;    
+    margin-bottom: 0;
+}
+
+
+#policy_item_contents {
+line-height:1.6em;
+}
+.styledbutton {
+    background: url("//shelter-england-images.s3.amazonaws.com/content-asset-images/donate_button_bg.gif") repeat-x scroll left top #CCCCCC;
+    border-color: #DEDEDE #9A9A9A #9A9A9A #DEDEDE;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    margin: 0;
+    overflow: visible;
+    padding: 3px 6px;
+    width: auto;
+    margin:20px;
+    float:right;
+}
+.styledbutton:hover {
+    background: url("//shelter-england-images.s3.amazonaws.com/content-asset-images/donate_button_bg.gif") repeat-x scroll left -40px #CCCCCC;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.indexcolumnsmallresource p {
+margin-bottom: 0;
+}
+
+/* Footer - from current site */
+
+footer {
+  width: 100%;
+  background: #F3F3F3;
+  display: block;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+#last_updated {
+    float:right; 
+    margin:5px 10px; 
+    font-size: 0.7857em; 
+    color:#999
+}
+
+
+#copyrightinfo {
+  font-size: 11px;
+  line-height: 2em;
+  margin-top: 50px;
+}
+
+#new_footer_right { display: block; }
+
+#footer_links_wrapper {
+  border-bottom: 2px solid #DDDDDD;
+  display: block;
+  min-height: 125px;
+  padding-bottom: 1em;
+}
+
+#footer_right_finalcol { width: 128px !important; }
+
+#footer_right_finalcol li a {
+  display: block;
+  padding-left: 20px;
+  height: 16px;
+  background: url("//shelter-england-images.s3.amazonaws.com/core-elements/social-networking-sprite.png") no-repeat;
+}
+
+.footer_header_row {
+  font-size: 13px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 7px;
+}
+
+#footerSNTwitter { background-position: 0 -23px !important; }
+
+#footerSNYoutube { background-position: 0 -46px !important; }
+
+#footerSNFlickr { background-position: 0 -68px !important; }
+
+#footer_email_signup { margin-top: 1.6em; }
+
+#footer_email_signup * {
+    float: left;
+    display: inline;
+}
+
+#footer_email_signup label {
+  font-size: 11px;
+  font-weight: bold;
+  margin-right: 12px;
+  position: relative;
+  top: 5px;
+}
+
+#footer_email_textbox {
+  padding: 4px;
+  width: 230px;
+  color: #BBB;
+  border: 1px solid #B6b6b6;
+  font-family:Helvetica, Arial, sans-serif;
+  margin-right: 12px;
+}
+
+#footer_email_textbox:focus { color: #000; }
+
+#footer_email_submit {
+  border: 1px solid #C6C6C6;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: #f3f3f3;
+  background: -moz-linear-gradient(top, #f3f3f3 0%, #CECECE 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#CECECE));
+  background: -webkit-linear-gradient(top, #f3f3f3 0%,#CECECE 100%);
+  background: -o-linear-gradient(top, #f3f3f3 0%,#CECECE 100%);
+  background: -ms-linear-gradient(top, #f3f3f3 0%,#CECECE 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#CECECE',GradientType=0 );
+  background: linear-gradient(top, #f3f3f3 0%,#CECECE 100%);  height: 25px;
+  width: 79px;
+  padding: 0;
+  font-size: 13px;
+}
+
+#footer_email_submit:hover {
+  cursor: pointer;
+  background: #CECECE;
+  background: -moz-linear-gradient(top, #CECECE 0%, #f3f3f3 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#CECECE), color-stop(100%,#f3f3f3));
+  background: -webkit-linear-gradient(top, #CECECE 0%,#f3f3f3 100%);
+  background: -o-linear-gradient(top, #CECECE 0%,#f3f3f3 100%);
+  background: -ms-linear-gradient(top, #CECECE 0%,#f3f3f3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#CECECE', endColorstr='#f3f3f3',GradientType=0 );
+  background: linear-gradient(top, #CECECE 0%,#f3f3f3 100%);
+}
+
+.footer_col li a:hover { text-decoration: underline !important; }
+
+/* End of new footer */
+
+
+
+#reskin_footer_menus li {
+  font-size: 11px;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+#reskin_footer_menus li a:link, #reskin_footer_menus li a:visited { 
+  font-size: 11px;
+  color: #444;
+  text-decoration: none;
+}
+
+.footer_header_row, .footer_header_row a:link, .footer_header_row a:visited {
+  color: #444;
+  text-decoration: none;
+  font-size: 12px !important;
+}
+
+.footer_header_row a:hover { text-decoration: underline; }
+
+.footer_header_row { border-bottom: 1px dotted #AAA; }
+
+.footer_col {
+  float: left;
+  width: 150px;
+  margin-right: 10px;
+  display: inline;
+  min-height:180px ;
+}
+
+#reskin_footer_email_signup {
+  margin: 10px 0 30px 0;
+  height: 50px;
+  position: relative;
+}
+
+#reskin_footer_email_signup label {
+  color: #444;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+#footer_email_textbox {
+  position: absolute;
+  left: 0;
+  top: 22px;
+  padding: 4px 4px;
+  height: 13px;
+}
+
+#footer_email_submit {
+  position: absolute;
+  left: 245px;
+  top: 22px;
+  height: 23px;
+}
+
+#reskin_footer_strapline {
+  margin-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #AAA;
+}
+
+#copyrightinfo {
+  font-size: 11px;
+  line-height: 1.4;
+  margin-top: 20px;
+}
+
+#footer_logo {
+  float: right;
+  margin-top: 20px;
+  width: 160px;
+  display: inline;
+}
+
+/* Embedding */
+.embed-container {
+    position: relative;
+    padding-bottom: 50%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* EVENTS */
+.event #content header {
+    background-color: transparent;
+}
+
+.event .breadcrumb {
+    border-bottom: none;
+    background-color: #f3f3f3;
+    margin-bottom: 0;
+}
+.event-header {
+    padding: 0;
+}
+.event-header h2 {
+    color: #626262;
+    line-height: 1.2em;
+}
+.event-header hgroup {
+    background: none repeat scroll 0 0 rgba(16,? 17,? 14,? 0.9);
+    padding: 1em 1em 0 1.1em;
+}
+.event-header h1 {
+    color: #b14c4c;
+    line-height: 1.2em;
+    margin-bottom: 0.6em;
+    font-family: "HelveticaNeue-CondensedBold","Helvetica Neue Condensed Bold", "Open Sans Condensed","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.event #content {
+    padding-top: 0;
+}
+.event-content {
+    margin-top: 50px;
+}
+.event-content h2 {
+    margin-top: 1em;
+}
+.event-content section {
+    margin-bottom: 1em;
+}
+.video-embed {
+    width: 100%;
+    max-width: 100%;
+}
+
+.event-facts {
+    background-color: #EAE3E1;
+    color: #626262;
+}
+
+.event-facts ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.event-facts li {
+    padding-left: 65px;
+    min-height: 43px;
+}
+.event-facts :not(:last-child) {
+    border-bottom: 1px #f3f3f3 solid;
+    padding-bottom: 1em;
+    background-position: 5px 0;
+}
+.event-facts :not(:first-child) {
+    padding-top: 1em;
+    background-position: 5px 15px;
+}
+
+.event-facts ul li {
+    background-repeat: no-repeat;
+}
+li.event-date {
+    background-image: url('http://scotland.shelter.org.uk/?a=583124');
+}
+li.event-distance {
+    background-image: url('http://scotland.shelter.org.uk/?a=583159');
+}
+li.event-pledge {
+    background-image: url('http://scotland.shelter.org.uk/?a=594879');
+    background-position: 15px 3px;
+}
+
+/* Signup forms */
+.event-signup-form input[type="text"] { 
+   height: 2em;
+    border: 3px solid #cfcfcf;
+    font-size: 1em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    width: 95%;
+}
+.event-signup-form input[type="submit"] {
+    background-color: #007AB7;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: "HelveticaNeue-CondensedBold","Helvetica Neue Condensed Bold",'Open Sans Condensed',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-stretch: condensed;
+    font-size: 1.125em;
+    padding: 0.79em 0.75em;
+    width: 100%;
+}
+.event-signup-form  {
+    background-color: #E6ECEF;
+    padding-bottom: 1em;
+
+}
+
+/* LOCAL NAVIGATION */
+.event .leftnav {
+    display: block;
+}
+.event .leftnav li.active a {
+    border-top-width: 0;
+}
+
+/*Default background colours for info panels */
+.event-contact {
+    background-color: #eae3e1;
+}
+
+@media only screen and (min-width: 1100px) {
+    
+    .event-spartan-race #content input[type="text"] {
+        width: 23.25%;
+    }
+}
+
+/* Race form */
+#newForm ul label{margin-right:10px}
+#newForm li{float:left}
+.greyUnderline{width:500px;border-bottom:1px solid #ccc}
+#newForm ul {
+  list-style: none;
+}
+#content_div_61218 #donateByPhone {
+    bottom: auto;
+    left: auto;
+    position: static;
+}
+
+/* REMOVE AFTER GO-LIVE */
+/* These styles just hide things in content that are required for current
+site but should not appear on redesigned site.  Should be removed when redesign
+is live.  */
+.btt_final, .btt_final+hr, #countryinformation {
+    display: none;
+}

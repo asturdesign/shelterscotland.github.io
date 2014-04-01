@@ -1,0 +1,181 @@
+
+.newsletter {
+    padding: 45px 35px 50px;
+    border: 1px solid #c2c2c2;
+    background-color: #f6f6f6;
+    background-image: 
+        url('http://www.shelter.org.uk/__data/assets/image/0006/645099/stamp.png'),
+        url('http://www.shelter.org.uk/__data/assets/image/0019/645103/stripes.png');
+    background-position: 98% 34px, 50% 97%, 50% 10px, left top;
+    background-size: 250px auto, 922px auto, 922px auto, 33px auto;
+    background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+    color: #404040;
+    margin-top:30px;
+}
+
+.newsletter p {
+    line-height: 22px;
+width:70%;
+}
+.newsletter input.form-field {
+   background-color: #FCFCFC;
+    border: 1px solid #D4D4D4;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 0 0 white, 0 3px 10px -5px rgba(0, 0, 0, 0.4) inset;
+    font-size: 15px;
+    font-style: normal;
+    padding: 14px;
+    width: 17%;
+}
+.newsletter input.form-field:focus {
+    border: 1px solid rgba(0,150,255,0.5);
+    box-shadow: 
+        0 1px 0 0 rgba(255,255,255,0),
+        inset 0 3px 10px -5px rgba(0,0,0,0.4),
+        0 0 16px 0 rgba(0,150,255,0.5);
+}
+.newsletter input.form-field:focus {
+    border: 1px solid rgba(0,150,255,0.5);
+    box-shadow: 
+        0 1px 0 0 rgba(255,255,255,0),
+        inset 0 3px 10px -5px rgba(0,0,0,0.4),
+        0 0 16px 0 rgba(0,150,255,0.5);
+}
+.newsletter .button {
+    background-color: #2899D1;
+    background-image: linear-gradient(180deg, #2BA3DE, #258EC0);
+    border: 1px solid #1F7CBD;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4) inset, 0 80px 57px -60px rgba(255, 255, 255, 0) inset;
+    color: white;
+    display: inline-block;
+    font-family: "HelveticaNeue-CondensedBold","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 24px;
+    margin-top: 5px;
+    padding: 6px 45px 14px;
+    text-decoration: none;
+    transition: box-shadow 150ms ease-in-out 0s;
+}
+.newsletter .button:hover {
+    box-shadow: 
+        inset 0 1px 0 0 rgba(255,255,255,0.6),
+        inset 0 80px 57px -60px rgba(255,255,255,0.3);
+}
+.half_opacity {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.campaigns_quick_signup_inputwrapper {
+    float: left;
+    width: 18%;
+    margin-left: 12px;
+}
+.campaigns_quick_signup {
+    overflow: hidden;
+    padding-left: 0px;
+    position: relative;
+}
+
+.campaigns_quick_signup_email {
+    width: 22%;
+}
+.campaigns_quick_signup_postcode {
+    width: 12%;
+}
+.campaigns_quick_signup_submit {
+    width: 20%;
+}
+.campaigns_quick_signup input {
+    border: 3px solid #E6E4DC;
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 8px;
+    width: 88%;
+}
+.hidden {
+display:none;
+} 
+.signup_thankyou {
+color: #53a95d
+
+}
+#campaigns_submission_error {
+    display: none;
+color:#cc0000;
+}
+.signup_spinner {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    z-index: 500;
+    color: black;
+    height: 40px;
+    width: 40px;
+    background: url(./?a=656358) no-repeat;
+}
+
+.campaigns_quick_signup .campaigns_red_button {
+   background: none repeat scroll 0 0 #007AB7;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-family: "HelveticaNeue-CondensedBold","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 21px;
+    padding: 6px 5px 6px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.campaigns_red_button:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+
+.campaigns_quick_signup_inputwrapper {
+    width: 90%;
+}
+
+.campaigns_quick_signup_email {
+   width: 90%;
+}
+.campaigns_quick_signup_postcode {
+    width: 90%;
+}
+.campaigns_quick_signup_submit {
+   width: 90%;
+}
+.newsletter {
+    padding: 45px 35px 50px;
+    border: 1px solid #c2c2c2;
+    background-color: #f6f6f6;
+    background-image: 
+        url('http://www.shelter.org.uk/__data/assets/image/0006/645099/stamp.png'),
+        url('http://www.shelter.org.uk/__data/assets/image/0019/645103/stripes.png');
+    background-position: 98% 34px, 50% 97%, 50% 10px, left top;
+    background-size: 150px auto, 922px auto, 922px auto, 33px auto;
+    background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+    color: #404040;
+    margin-top:30px;
+}
+ }
+
+ @media screen and (max-width: 768px) {
+
+.campaigns_quick_signup_inputwrapper {
+    width: 90%;
+}
+
+.campaigns_quick_signup_email {
+   width: 90%;
+}
+.campaigns_quick_signup_postcode {
+    width: 90%;
+}
+.campaigns_quick_signup_submit {
+   width: 90%;
+}
+ }

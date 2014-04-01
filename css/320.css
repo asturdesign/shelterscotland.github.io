@@ -1,0 +1,343 @@
+/*
+  Running Squiz Matrix
+  Developed by Squiz - http://www.squiz.net
+  Squiz, Squiz Matrix, MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
+  Page generated: 29 July 2013 15:09:18
+*/
+
+
+/* Query Styles for 320px and up */
+
+#content {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+/* new carousel */
+.grey-button {
+    width:89.7%;
+}
+.blue-button {
+    width:95%;
+}
+/* new carousel */
+.useful-info ul {
+    margin-bottom:30px;
+}
+
+#logo img {
+    max-width: 100%;
+}
+
+.strapline {
+    font-size: 16px;
+}
+
+header nav li {
+    padding-right: 5px;
+    font-size: 13px;
+}
+
+header .seealso ul {
+    margin-top:0;
+    margin-bottom:0;
+    font-size: 12px;
+    /*CR Change */
+    float:right;
+}
+
+header .seealso ul li {
+    padding-right: 6px;
+}
+
+header input#search {
+    width: 70%;
+}
+input.search {
+   font-size: 14px;
+}
+
+header button {
+    width: 22%;
+}
+
+.footer_col {
+    width: 45%;
+}
+
+button {
+    width: 90px;
+    font-size: 14px;
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+aside.action .point {
+    display:none;
+}
+
+aside.action, aside.article-content {
+    padding:10px;
+    margin-bottom:20px;
+}
+
+.contents li {
+    height:110px;
+}
+
+.sections li {
+    height:130px;
+}
+
+nav.leftnav {
+    padding-bottom: 0;
+    padding-top: 10px;
+}
+
+nav.leftnav select {
+    display:block;
+    width: 100%;
+}
+
+
+
+#campaign {
+    width: 100%;
+    max-width: 424px;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.carousel {
+   /* margin-top: 20px;*/
+}
+
+.carousel {
+    width: 100%;
+    position: relative;
+}
+
+.carousel .casestudy p {
+float: left;
+width: 45%;
+margin-left: 25px;
+margin-bottom: 0;
+font-size: 12px;
+}
+
+.email, .print {
+    margin-left: 10px;
+}
+
+#toggle {
+    display: none;
+}
+
+.next {
+    font-size: 18px;
+    padding: 10px 45px 10px 15px;
+    background: #007ab7 url(//scotland.shelter.org.uk/__data/assets/image/0005/643316/arrow02.png) 60px 45% no-repeat;
+    
+} 
+
+fieldset {
+padding-top: 5px;
+}
+
+aside.action .campaignfield {
+    background-color: #fff;
+    border-color: #666666 #CCCCCC #CCCCCC #666666;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 13px;
+    margin: 0;
+    padding: 2px;
+    width: 185px;
+}
+
+.getinvolved-carousel .story {
+    padding-bottom: 80px;
+}
+.getinvolved-carousel .slideno {
+    bottom: 30px;
+}
+.getinvolved-carousel .slide-link {
+    bottom: 60px;
+}
+.getinvolved-carousel .carousel-nav {
+    margin-bottom: 20px;
+}
+
+#ajax_search_container {
+top:430px;
+}
+
+#search_list {
+    width:91%;
+}
+
+aside.action.form input[type="text"] {
+    width: 96%;
+}
+.newsletter {
+    padding: 45px 35px 50px;
+
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+background-image:none;
+
+    background-color: #f6f6f6;
+    
+
+    color: #404040;
+    margin-top:30px;
+}
+
+
+nav.leftnav select {
+    display:block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+header nav ul {
+    margin-bottom: 0;
+}
+
+.topnav {
+    width: 100%;
+    float: left;
+}
+
+header nav li {
+    padding-right: 0;
+}
+
+
+.topnav li a {
+    display: inline-block;
+    width: 49%;
+    margin: 0;
+    padding: 6px 0 8px 0;
+    background-color: #cfdae0;
+    vertical-align: top;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+.topnav ul.nav-links {
+    display: block;
+}
+
+.topnav.show-nav ul.nav-links {
+    display: block;
+}
+
+.topnav #hide-nav-link {
+    display: none;
+}
+
+.topnav.show-nav {
+    position: relative;
+}
+
+.topnav.show-nav #hide-nav-link {
+    display: block;
+    position: absolute;
+    width: 10px;
+    padding: 0;
+    margin: 0;
+    left: -20px;
+    top: 15px;
+}
+.topnav.show-nav a#hide-nav-link:hover {
+    background-color: transparent;
+}
+
+.topnav li.donate a {
+    border-radius: 0;
+    color: #007ab7;
+    background-position: 4% center;
+    background-repeat: no-repeat;
+}
+
+.topnav li.home a {
+    background-image: url(//www.shelter.org.uk/__data/assets/image/0008/671633/home.png
+);
+    background-position: 4% center;
+    background-repeat: no-repeat;
+}
+
+.topnav li.advice a {
+    background-image: url(//scotland.shelter.org.uk/__data/assets/image/0010/671635/advice.png
+);
+    background-position: 4% center;
+    background-repeat: no-repeat;
+}
+
+.topnav li.involve a {
+    background-image: url(//www.shelter.org.uk/__data/assets/image/0004/671629/person.png
+);
+    background-position: 4% center;
+    background-repeat: no-repeat;
+}
+
+.topnav ul.show-nav-link {
+    display: none;
+}
+
+.topnav.show-nav ul.show-nav-link {
+    display: none;
+}
+
+.topnav li.show-hide-nav a {
+    width:  100%;
+}
+
+.topnav .active a, .topnav a:hover {
+    background-color: #b6c5ce;
+    color: #6c6c6c;    
+    text-decoration: none;
+}
+
+#toggle {
+    display: none;
+}
+
+#searchform {
+    margin-top:25px;
+    margin-right:-20px;
+}
+
+@media (min-width: 500px) {
+    aside.action.form input[type="text"] {
+        width: 97%;
+    }
+}
+@media (min-width: 700px) {
+    aside.action.form input[type="text"] {
+        width: 98%;
+    }
+}
+
+
+/* EVENTS */
+
+.event-header {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.event-header hgroup {
+    padding-bottom: 0.5em;
+}
+
+/* EVENT SPECIFIC (background images etc) */
+.event-parachuting .event-header {
+    padding-bottom: 294px;
+}
