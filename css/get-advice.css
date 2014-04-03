@@ -506,6 +506,9 @@ article #sticky-menu li:hover {
 	.callout-box:before {
 		display: none	;
 	}
+	#important-points {
+		padding: 2em 2em 2em 2.2em;
+	}
 }
 
 
