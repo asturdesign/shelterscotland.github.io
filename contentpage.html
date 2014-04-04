@@ -46,6 +46,7 @@
 		<link href="http://shelterscotland.github.io/css/campaigns.css" rel="stylesheet" type="text/css" />
 		<link href="http://shelterscotland.github.io/css/easy-responsive-tabs.css" rel="stylesheet" type="text/css" />
 		<link href="http://shelterscotland.github.io/css/get-advice.css" rel="stylesheet" type="text/css" />
+		<link href="css/tabzilla.css" rel="stylesheet" />
 
 		<!--IE Styles -->
 		<!--[if IE]><link href="http://www.shelter.org.uk/_designs/css/scotland_2013/ie.css" rel="stylesheet" /><![endif]-->
@@ -69,28 +70,25 @@
 		<script src="js/menu.js"></script>
 		<script src="js/modernizr.js"></script>
 		<script src="js/polyfiller.js"></script>
-		<script>
-			<![CDATA[
-			   $.webshims.polyfill('forms'); 
-			]]>
-		</script><!-- End Scripts (asset #682240) -->
 	
 		<script src="js/fittext.js"></script>
-		<script>
-			<![CDATA[
-					$(function() {
-					$("#home").fitText();
-				});
-			]]>
-		</script>
-		<link href="/_designs/css/scotland_2013/easy-responsive-tabs.css" rel="stylesheet" type="text/css" />
 	</head>
 
 	<body id="index">
+		
 		<header class="clearfix">
-			<!--[if lt IE 9]><div class="wrapper"><![endif]-->
+			<div class="wrapper">
+				<style>
+				header {
+					padding-top:0;
+					border-top: 2px #e32112 solid;
+				}
+				</style>
+				<a href="/" id="tabzilla">mozilla</a>
 			<div class="da-all da-padinfull t-padinfull m-tabinfull clearfix">
+
 				<div class="m-all t-all da-all db-all">
+
 					<a id="topofpage" name="topofpage"></a>
 
 					<div id="skip">
@@ -150,10 +148,10 @@
 					</nav>
 				</div>
 			</div>
-			<!--[if lt IE 9]></div><![endif]-->			
+			</div>		
 		</header>
 
-		<!--[if lt IE 9]><div class="wrapper"><![endif]-->
+		<div class="wrapper">
 		<div class="da-all da-padinfull t-padinfull m-tabinfull content clearfix">
 			<div class="m-all t-all da-all db-all">
 				<div class="m-all t-all da-all db-all" id="content">			
@@ -305,193 +303,7 @@
 		<footer>
 			<div class="wrapper">
 				<div class="clearfix m-all t-all da-all" id="footer">
-					<div class="l_tencol clearfix finalcol">
-						&nbsp;
-					</div>
-
-					<div class="l_fourteencol clearfix finalcol" id="reskin_footer_menus">
-						<ul class="footer_col">
-							<li class="footer_header_row">
-								<a href="http://scotland.shelter.org.uk/about_us/">
-									About Shelter
-								</a>
-							</li>
-							<li>
-								<a href="http://scotland.shelter.org.uk/about_us/who_we_are/">
-									Who	we are
-							</a>
-							</li>
-							<li>
-								<a href="http://scotland.shelter.org.uk/about_us/how_we_make_a_difference/">
-									How we make a difference
-								</a>
-							</li>
-						</ul>
-
-						<ul class="footer_col">
-							<li class="footer_header_row">
-								<a href="http://scotland.shelter.org.uk/about_us/contact_us">
-								Get	in touch
-								</a>
-							</li>
-							<li>
-								<a href="http://scotland.shelter.org.uk/about_us/contact_us">
-									General	enquiries
-								</a>
-							</li>
-							<li>
-								<a href="http://scotland.shelter.org.uk/getadvice/how_we_can_help/_free_housing_advice_helpline">
-									Housing advice helpline
-								</a>
-							</li>
-						</ul>
-
-						<ul class="footer_col">
-							<li class="footer_header_row">
-								<a href="http://scotland.shelter.org.uk/what_you_can_do">
-									Get involved
-								</a>
-							</li>
-
-							<li>
-								<a href="http://scotland.shelter.org.uk/donate">
-									Donate
-								</a>
-							</li>
-							<li>
-								<a href="http://scotland.shelter.org.uk/what_you_can_do/campaigning/">
-									Campaign with us
-								</a>
-							</li>
-
-							<li>
-								<a href="http://scotland.shelter.org.uk/what_you_can_do/volunteer">
-									Volunteer
-								</a>
-							</li>
-
-							<li>
-								<a href="http://ig29.i-grasp.com/fe/tpl_shelter01.asp?s=smnew"
-							onclick="_gaq.push(['_trackEvent','outbound','Click','ig29.i-grasp.com/fe/tpl_shelter01.asp?s=smnew']);">
-									Jobs
-								</a>
-							</li>
-						</ul>
-
-						<ul class="footer_col">
-							<li class="footer_header_row">
-								<a href="http://scotland.shelter.org.uk/professional_resources">
-									For professionals
-								</a>
-							</li>
-
-							<li>
-								<a href="http://scotland.shelter.org.uk/professional_resources/policy_library">
-									Policy Library
-								</a>
-							</li>
-
-							<li>
-								<a href="http://scotland.shelter.org.uk/professional_resources/events_and_conferences">
-									Events and conferences
-								</a>
-							</li>
-
-							<li>
-								<a href="http://scotland.shelter.org.uk/professional_resources/training">
-									Training
-								</a>
-							</li>
-
-							<li>
-								<a href="http://scotland.shelter.org.uk/legal/home">Shelter
-									Legal
-								</a>
-							</li>
-
-							<li>
-								<a href="http://scotland.shelter.org.uk/about_us/how_we_make_a_difference/publications">
-									Publications
-								</a>
-							</li>
-
-							<li>
-								<a href="http://scotland.shelter.org.uk/media">
-									Media
-								</a>
-							</li>
-						</ul>
-
-						<ul class="footer_col">
-							<li class="footer_header_row">
-								<a href="http://scotland.shelter.org.uk/about_us/about_this_website">
-									Help with our site
-								</a>
-							</li>
-
-							<li>
-								<a href="http://scotland.shelter.org.uk/about_us/about_this_website/web_accessibility">
-									Accessibility
-								</a>
-							</li>
-
-							<li>
-								<a href="http://scotland.shelter.org.uk/about_us/about_this_website/legal_disclaimer_and_copyright">
-									Legal
-								</a>
-							</li>
-
-							<li>
-								<a href="http://scotland.shelter.org.uk/about_us/about_this_website/privacy_policy">
-									Privacy
-								</a>
-							</li>
-
-							<li>
-								<a href="http://scotland.shelter.org.uk/about_us/about_this_website/sitemap">
-									Sitemap
-								</a>
-							</li>
-
-							<li>
-								<a href="http://scotland.shelter.org.uk/about_us/contact_us">
-									Feedback
-								</a>
-							</li>
-						</ul>
-
-						<ul class="footer_col finalcol" id="scotfooter_right_finalcol">
-							<li class="footer_header_row">Follow us online</li>
-							<li>
-								<a href="http://www.facebook.com/pages/Shelter-Scotland/101558386889" onclick="_gaq.push(['_trackEvent','outbound','Click','www.facebook.com/pages/Shelter-Scotland/101558386889']);">
-									Facebook
-								</a>
-							</li>
-
-							<li>
-								<a href="http://twitter.com/shelterscotland" id="footerSNTwitter" onclick="_gaq.push(['_trackEvent','outbound','Click','twitter.com/shelterscotland']);">
-									Twitter
-								</a>
-							</li>
-
-							<li>
-								<a href="http://www.youtube.com/user/ShelterScotland" id="footerSNYoutube" onclick="_gaq.push(['_trackEvent','outbound','Click','www.youtube.com/user/ShelterScotland']);">
-									Youtube
-								</a>
-							</li>
-
-							<li><a href="http://www.flickr.com/shelterscotland" id="footerSNFlickr" onclick="_gaq.push(['_trackEvent','outbound','Click','www.flickr.com/shelterscotland']);">
-									Flickr
-								</a>
-							</li>
-
-							<li>
-								<a href="http://www.foursquare.com/shelterscotland" id="footerSNFoursquare" onclick="_gaq.push(['_trackEvent','outbound','Click','www.foursquare.com/shelterscotland']);">
-									Foursquare
-								</a>
-							</li>
-						</ul>
-					</div>
+					
 
 					<div class="l_fourteencol finalcol clearfix" id="reskin_footer_strapline">
 						<p class="footer_large_cufon">Every thirty six minutes someone in<br />
@@ -543,5 +355,6 @@
 			});
 		</script>
 		<script src="js/gridset-overlay.js"></script><script src="http://www.shelter.org.uk/__data/assets/js_file/0007/280843/external_libraries.js?ver=0.2" type="text/javascript"></script>
+		<script src="js/tabzilla.js"></script>
 	</body>
 </html>
