@@ -226,6 +226,9 @@ footer a,
 	height: 445px;
 }
 
+.ac-container input:checked ~ article.last{
+	border-bottom: 1px solid #ccc;;
+}
 #reskin_footer_email_signup {
 	border-top: 4px solid #e6e4dc;
 	height: auto;
